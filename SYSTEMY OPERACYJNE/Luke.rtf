@@ -1,0 +1,577 @@
+{\rtf1\ansi\ansicpg1250\deff0\deflang1045{\fonttbl{\f0\fswiss\fcharset238{\*\fname Arial;}Arial CE;}{\f1\fnil\fcharset0 TimesNewRoman;}{\f2\fnil\fcharset238 TimesNewRoman+1;}{\f3\fnil\fcharset238 ArialMT;}{\f4\fnil\fcharset238 Arial-ItalicMT;}{\f5\fnil\fcharset238 Arial-BoldMT;}{\f6\fnil\fcharset128 OpenSymbol;}{\f7\fswiss\fprq2\fcharset238{\*\fname Arial;}Arial CE;}{\f8\froman\fprq2\fcharset238{\*\fname Times New Roman;}Times New Roman CE;}{\f9\froman\fcharset0 Times New Roman;}}
+{\colortbl ;\red0\green0\blue0;\red0\green129\blue0;\red0\green0\blue255;\red255\green255\blue255;}
+{\*\generator Msftedit 5.41.15.1515;}\viewkind4\uc1\pard\b\f0\fs20 Uzasadnij id\'ea stosowania maszyn wirtualnych w systemach operacyjnych.\par
+\b0 Maszyny wirtualne s\'b9 u\'bfywane do:\par
+    \b *\b0  do uruchamiania istniej\'b9cych aplikacji i system\'f3w operacyjnych w innych \'9crodowiskach ni\'bf pierwotne\par
+    \b *\b0  dla zapewnienia uniwersalnego \'9crodowiska uruchomieniowego\par
+    \b *\b0  do bezpiecznego rozdzielania zasob\'f3w du\'bfych maszyn (mainframe, superkomputery)\par
+    \b *\b0  do uruchamiania jednocze\'9cnie r\'f3\'bfnych system\'f3w operacyjnych na jednym komputerze\par
+    \b *\b0  do uruchamiania na jednym komputerze programowych klastr\'f3w\par
+    \b *\b0  do uzyskania pe\'b3nej kontroli nad systemem operacyjnym, np. podczas analizowania jego pracy\par
+    \b *\b0  do optymalizacji pracy program\'f3w, poprzez kontrol\'ea ich \'9crodowiska dzia\'b3ania i procesu translacji kodu\b\par
+Podaj jedn\'b9 wybran\'b9 definicj\'ea systemu operacyjnego.\par
+\b0 1.Oprogramowanie zarz\'b9dzaj\'b9ce sprz\'eatem komputerowym, tworz\'b9ce \'9crodowisko do uruchamiania i kontroli zada\'f1 u\'bfytkownika.\par
+2.\lang1033\f1 System operacyjny jest zbiorem r\lang1045\f2\'ea\lang1033\f1 cznych i automatycznych\lang1045\f2  \lang1033\f1 procedur, kt\'f3re pozwalaj\lang1045\f2\'b9 \lang1033\f1 grupie os\'f3b na efektywne\lang1045\f2  \lang1033\f1 wsp\'f3\lang1045\f2\'b3\lang1033\f1 dzielenie urz\lang1045\f2\'b9\lang1033\f1 dze\lang1045\f2\'f1 \lang1033\f1 maszyny cyfrowej\lang1045\f2 .\b\f0\par
+Na czym polega transparentno\'9c\'e6 rozproszonego systemu operacyjnego?\par
+\b0 Transparentno\'9c\'e6, inaczej przezroczysto\'9c\'e6 stwarza na u\'bfytkownikach systemu rozproszonego wra\'bfenie pojedynczego i zintegrowanego systemu.\b\par
+Co rozumiesz pod poj\'eaciem komunikacja mi\'eadzyprocesowa?\par
+\b0 Umowna nazwa zbioru sposob\'f3w komunikacji pomi\'eadzy procesami systemu operacyjnego. Sposoby komunikacji:\par
+    * pliki i blokady \endash  najprostsza i najstarsza forma IPC\par
+    * sygna\'b3y (ang. signals) \endash  w niekt\'f3rych systemach (jak np. DOS) znane jako przerwania programowe\par
+    * semafory (ang. semaphores)\par
+    * \'b3\'b9cza nienazwane (ang. pipes) \endash  znane te\'bf jako \'b3\'b9cza komunikacyjne\par
+    * \'b3\'b9cza nazwane (ang. named pipes) \endash  znane te\'bf jako nazwane \'b3\'b9cza komunikacyjne\par
+    * kolejki komunikat\'f3w (ang. message queues)\par
+    * pami\'ea\'e6 dzielon\'b9 (ang. shared memory) \endash  znane te\'bf jako segmenty pami\'eaci dzielonej (ang. shared memory segments)\par
+    * gniazda dziedziny Uniksa (ang. Unix domain sockets)\b\par
+Jakie znasz typy system\'f3w operacyjnych ze wzgl\'eadu na sprz\'eat na kt\'f3ry s\'b9 projektowane?\par
+\b0 1. Mainframe vs Superkomputer\par
+2. Typu desktop\par
+3. Wieloprocesorowe\par
+4. Rozproszone\par
+5. Macierzowe (klastry)\par
+6. Czasu rzeczywistego\par
+7. Urz\'b9dze\'f1 przeno\'9cnych\par
+8. \'8crodowiska obliczeniowe\b\par
+Czym charakteryzuje si\'ea system czasu rzeczywistego?\par
+\b0 System czasu rzeczywistego (ang. real-time system), to urz\'b9dzenie techniczne, kt\'f3rego wynik i efekt dzia\'b3ania jest zale\'bfny od chwili wypracowania tego wyniku. Istnieje wiele r\'f3\'bfnych definicji naukowych takiego systemu. Ich wsp\'f3ln\'b9 cech\'b9 jest zwr\'f3cenie uwagi na r\'f3wnoleg\'b3o\'9c\'e6 w czasie zmian w \'9crodowisku oraz oblicze\'f1 realizowanych na podstawie stanu \'9crodowiska. Z tego wy\'9ccigu dw\'f3ch stan\'f3w: zewn\'eatrznego i wewn\'eatrznego, wynikaj\'b9 kryteria ograniczaj\'b9ce czas wypracowywania wyniku. Systemy czasu rzeczywistego najcz\'ea\'9cciej buduje si\'ea w oparciu o komputery, jednak nie jest to konieczne - mo\'bfna tym poj\'eaciem okre\'9cli\'e6 np. pneumatyczny regulator.\b\par
+Wymie\'f1 i scharakteryzuj znane ci architektury system\'f3w operacyjnych.\par
+\b0 Monolityczna - najprostsza, jedno j\'b9dro systemu, tylko w komputerach jednozadaniowych\par
+warstwowa - hierarchia polece\'f1 systemowych\par
+klient/serwer - aplikacje (programy u\'bfytkowe) postrzegane s\'b9 przez system operacyjny jako klienci dostarczaj\'b9cych im swoich us\'b3ug serwer\'f3w. Klienci komunikuj\'b9 si\'ea z serwerami poprzez j\'b9dro systemu, ka\'bfdy serwer pracuje w w\'b3asnej, wydzielonej i chronionej przestrzeni adresowej pami\'eaci operacyjnej, dobrze odizolowany od innych proces\'f3w.\par
+Trzy wersje klient/serwer:\par
+a) wszystkie aplikacje wykonywane s\'b9 przez serwer a wyniki wy\'9cwietlane na ekranie klienta;\par
+b) serwer dostarcza danych dla aplikacji uruchamianych na komputerze klienta;\par
+c) wszystkie komputery wsp\'f3\'b3pracuj\'b9 ze sob\'b9 jak r\'f3wny z r\'f3wnym (peer-to-peer), korzystaj\'b9c wzajemnie ze swoich zasob\'f3w.\par
+Dyskietka systemowa, dysk systemowy - zawiera informacje wystarczaj\'b9ce do inicjacji systemu.\par
+Booting, bootable disk - rozruch, \'9cciaganie lub \'b3adowanie systemu.\par
+\b Co to jest tryb chroniony oraz tryb rzeczywisty. Do czego s\'b3u\'bf\'b9?\par
+\b0 Tryb chroniony (ang. protected mode) \endash  to tryb pracy mikroprocesor\'f3w serii x86 wprowadzony w mikroprocesorze Intel 80286. Tryb chroniony umo\'bfliwia adresowanie pami\'eaci w wi\'eakszym zakresie ni\'bf 1 MiB (tryb rzeczywisty), wprowadza wiele nowych udogodnie\'f1 wspieraj\'b9cych wielozadaniowo\'9c\'e6, takich jak: sprz\'eatowa ochrona pami\'eaci (uk\'b3ad MMU), wsparcie prze\'b3\'b9czania kontekstu procesora i wiele innych.\par
+Co rozumiesz pod poj\'eaciem maszyny wirtualnej w teorii SO.\par
+Tryb rzeczywisty \endash  tryb pracy mikroprocesor\'f3w z rodziny procesor\'f3w x86, w kt\'f3rym procesor pracuje tak jak procesor Intel 8086.\b\par
+\b0 Jest to og\'f3lna nazwa dla program\'f3w tworz\'b9cych \'9crodowisko uruchomieniowe dla innych program\'f3w.\par
+Maszyna wirtualna kontroluje wszystkie odwo\'b3ania uruchamianego programu bezpo\'9crednio do sprz\'eatu lub systemu operacyjnego i zapewnia ich obs\'b3ug\'ea. Dzi\'eaki temu program uruchomiony na maszynie wirtualnej "my\'9cli", \'bfe dzia\'b3a na rzeczywistym sprz\'eacie, podczas gdy w istocie pracuje na sprz\'eacie wirtualnym, "udawanym" przez odpowiednie oprogramowanie (maszyn\'ea wirtualn\'b9).\par
+Definiuj\'b9 tryb pracy mikroprocesora.\b\par
+Z jakich element\'f3w sk\'b3ada si\'ea typowy system komputerowy? \par
+\b0 p\'b3yta g\'b3\'f3wna: \tab\tab\tab procesor, RAM, BIOS, gniazda rozszerze\'f1, bateria\par
+porty: \tab\tab\tab\tab szeregowy (COM), r\'f3wnoleg\'b3y (LPT), USB, mysz PS/2, klawiatura\par
+opcjonalne porty: \tab\tab IEEE-1394 (Fire Wire), modem analogowy, d\'9fwi\'eak, SCSI\par
+urz\'b9dzenia wej\'9cciowe:\tab\tab mysz, klawiatura, touchpad, trackball\par
+standardowa pami\'ea\'e6 masowa:\tab nap\'ead dyskietek, dyski twarde IDE, czytnik kart flash,\par
+no\'9cniki masowej pami\'eaci:\tab CD , DVD, ta\'9cma archiwizacyjna,\par
+ekran: \tab\tab\tab\tab karta graficzna, monitor\par
+zasilacz\b\par
+Z jakich element\'f3w sk\'b3ada si\'ea typowy system operacyjny? \par
+\b0\f3 Warstwa techniczna kontroluj\'b9ca urz\'b9dzenia za pomoc\'b9 sterownik\'f3w.\par
+System plik\'f3w (lub kilka system\'f3w) pozwalaj\'b9cy logicznie organizowa\'e6 pliki.\par
+Podstawowy interfejs u\'bfytkownika: \i\f4 CLI \endash  command line interface \i0\f3 lub \i\f4 GUI \endash  graphical user interface\i0\f3 .\par
+Centraln\'b9 cz\'ea\'9cci\'b9 systemu jest J\'a5DRO (kernel) odpowiedzialne za przydzielanie oraz synchronizacj\'ea wykorzystania zasob\'f3w mi\'eadzy uruchomionymi procesami.\b\f0\par
+Podaj podstawowe zadania systemu operacyjnego.\par
+\b0\f3 kKontrola zasob\'f3w pami\'eaci, priorytetowanie wykonywanych instrukcji, kontrola urz\'b9dze\'f1 wej\'9ccia-wyj\'9ccia, umo\'bfliwienie korzystania z sieci komputerowej, zarz\'b9dzanie plikami.\b\f0\par
+Co rozumiesz pod poj\'eaciem system wieloprocesorowy oraz system rozproszony w kontek\'9ccie wzajemnych r\'f3\'bfnic.\par
+\cf1\b0\f3 Wieloprocesorowy\cf2  \cf1 system komputerowy jest systemem, w kt\'f3rym do dyspozycji jest wi\'eacej ni\'bf jeden procesor.\par
+System rozproszony\cf2  \cf1 (ang. distributed system) to zbi\'f3r niezale\'bfnych urz\'b9dze\'f1 technicznych po\'b3\'b9czonych w jedn\'b9, sp\'f3jn\'b9 logicznie ca\'b3o\'9c\'e6. Zwykle\par
+\'b3\'b9czonymi urz\'b9dzeniami s\'b9 komputery, rzadziej - systemy automatyki. Po\'b3\'b9czenie najcz\'ea\'9cciej realizowane jest przez sie\'e6 komputerow\'b9, jednak\par
+mo\'bfna wykorzysta\'e6 r\'f3wnie\'bf inne - prostsze - magistrale komunikacyjne. Urz\'b9dzenia s\'b9 wyposa\'bfone w oprogramowanie umo\'bfliwiaj\'b9ce\par
+wsp\'f3\'b3dzielenie zasob\'f3w systemowych.\cf0\b\f0\par
+Wsp\'f3\'b3czesne systemy operacyjne og\'f3lnego przeznaczenia zaliczy\'b3(a)by\'9c do system\'f3w wsadowych czy interakcyjnych? Odpowied\'9f uzasadnij.\par
+\b0\f3 Systemy przetwarzania bezpo\'9credniego (ang. On-line processing systems) \emdash  \f5 systemy interakcyjne\par
+\f6\endash  \f3 wyst\'eapuje bezpo\'9crednia interakcja pomi\'eadzy u\'bfytkownikiem a systemem,\par
+\f6\endash  \f3 wykonywanie zadania u\'bfytkownika rozpoczyna si\'ea zaraz po przed\'b3o\'bfeniu,\par
+\f6\endash  \f3 kr\'f3tki czas przetwarzania (rz\'eadu sekund, usability)\par
+Systemy przetwarzania po\'9credniego (ang. Offline processing systems) \emdash  \f5 systemy wsadowe\par
+\f6\endash  \f3 wyst\'eapuje znacz\'b9ca zw\'b3oka czasowa mi\'eadzy przed\'b3o\'bfeniem a rozpocz\'eaciem wykonywania\par
+zadania,\par
+\f6\endash  \f3 niemo\'bfliwa jest ingerencja u\'bfytkownika w wykonywanie zadania,\par
+\f6\endash  \f3 spooling (wykorzystanie dysku jako olbrzymiego bufora do czytania z maksymalnym\par
+wyprzedzeniem z urz\'b9dze\'f1 wej\'9cciowych oraz do przechowywania danych wyj\'9cciowych do\par
+czasu, a\'bf urz\'b9dzenia wyj\'9cciowe b\'ead\'b9 w stanie je przyj\'b9\'e6)\f0\par
+\b Co to jest przerwanie w systemie komputerowym?\par
+\b0\f3 Przerwanie jest reakcj\'b9 na asynchroniczne zdarzenie, polegaj\'b9c\'b9 na\par
+automatycznym zapami\'eataniu bie\'bf\'b9cego stanu procesora w celu\par
+p\'f3\'9fniejszego odtworzenia oraz przekazaniu sterowania do ustalonej\par
+procedury obs\'b3ugi przerwania.\par
+\f6\'81\'9c \f3 System przerwa\'f1 umo\'bfliwia niesekwencyjne (wsp\'f3\'b3bie\'bfne) wykonywanie program\'f3w.\par
+\f6\'81\'9c \f3 Zmiana sekwencji wykonywania instrukcji polega na tym, \'bfe w reakcji na przerwanie nast\'eapuje\par
+zapami\'eatanie bie\'bf\'b9cego stanu przetwarzania (najwa\'bfniejszych rejestr\'f3w procesora), przekazanie\par
+sterowania do ustalonej procedury obs\'b3ugi i rozpocz\'eacie wykonywania instrukcji tej procedury.\b\f0\par
+Czy system przerwa\'f1 s\'b3u\'bfy do sekwencyjnego (niewsp\'f3\'b3bie\'bfnego) wykonywanie program\'f3w?\par
+\b0 Nie, system przerwa\'f1n umo\'bfliwia niesekwencyjne (wsp\'f3\'b3bie\'bfne) wykonywanie program\'f3w str 22/1\b\par
+\b0\f3 System przerwa\'f1 umo\'bfliwia niesekwencyjne (wsp\'f3\'b3bie\'bfne) wykonywanie program\'f3w.\b\f0\par
+Do czego s\'b3u\'bfy przerwanie zegarowe?\par
+\b0\f3 Przerwanie zegarowe generowane jest przez czasomierz (ang. timer) po wyznaczonym okresie czasu.\par
+Obs\'b3uga przerwania zegarowego oznacza przekazanie sterowania do j\'b9dra systemu operacyjnego, umo\'bfliwiaj\'b9c w ten spos\'f3b wykonanie pewnych\par
+zda\'f1 okresowych.\b\f0\par
+Jakie znasz typowe \'9fr\'f3d\'b3a przerwa\'f1?\par
+\b0\f3 Przerwania zewn\'eatrzne \emdash  od urz\'b9dze\'f1 zewn\'eatrznych\par
+Przerwania programowe \emdash  wykonanie specjalnej instrukcji\par
+Przerwania diagnostyczne \emdash  pu\'b3apki, b\'b3\'eady programowe i sprz\'eatowe\b\f0\par
+Co rozumiesz po poj\'eaciem ochrony pami\'eaci w systemach komputerowych?\par
+\b0 Ochrona pami\'eaci (ang. memory protection) \emdash  zadanie realizowane przez wieloprogramowy system operacyjny, polegaj\'b9ce na niedopuszczaniu do wzajemnej ingerencji proces\'f3w w obszary swoich przestrzeni adresowych oraz w obszary nale\'bf\'b9ce do systemu operacyjnego. Wymaga to wsparcia sprz\'eatowego ze strony jednostki zarz\'b9dzaj\'b9cej pami\'eaci\'b9.\b\par
+Czy tryb chroniony i rzeczywisty ma jakikolwiek zwi\'b9zek z dualnym trybem pracy procesora w trybie u\'bfytkownika i trybie nadzorcy? Odpowied\'9f uzasadnij.\par
+\b0 Nie -  tryb chroniony i rzeczywisty to tryby pracy procesora z b\'b9d\'9f bez zabezpiecze\'f1, a \b\par
+Do czego jest wykorzystywane przerwanie zegarowe w systemach wielozadaniowych?\par
+\b0 Przerwanie zegarowe generowane jest przez czasomierz po wyznaczonym okresie czasu. Obs\'b3uga przerwania zegarowego oznacza przekazanie sterowania do j\'b9dra systemu operacyjnego, umo\'bfliwiaj\'b9c w ten spos\'f3b wykonanie pewnych zda\'f1 okresowych.\b\par
+Wymie\'f1 elementy kt\'f3rymi zarz\'b9dza system operacyjny?\par
+\cf1\b0\f3 1. \f5 Programy dla u\'bfytkownik\'f3w\f3 .\par
+\f6\endash  \f3 przetwarzanie interaktywne - wymaga ingerencji w trakcie wykonywania zadania, architektura oparta na zdarzeniach (GUI), urz\'b9dzenia wej\'9ccia-wyj\'9ccia,\par
+\f6\endash  \f3 przetwarzanie wsadowe \endash  wymaga jedynie parametr\'f3w startowych, (wykorzystywane przy przetwarzaniu potokowym)\par
+2. \f5 Serwisy \f3 (homonimy: demony, us\'b3ugi) dla lokalnych lub zdalnych u\'bfytkownik\'f3w, oraz inne us\'b3ugi pozwalaj\'b9ce tworzy\'e6 rozproszone architektury.\cf0\b\f0\par
+Wymie\'f1 konta o najwy\'bfszym poziomie uprawnie\'f1 w systemach unix i Windows.\par
+\b0 unix : root\par
+Windows : Administrator\b\par
+Czy jeden program mo\'bfe sk\'b3ada\'e6 si\'ea z wielu proces\'f3w? Odpowied\'9f uzasadnij.\par
+\b0 Tak\b\par
+Wymie\'f1 i scharakteryzuj znane ci architektury system\'f3w operacyjnych.\par
+\b0 Warstwa API (Application Program Interface)> Warstwa J\'b9dra (ang. kernel) > Warstwa sterownik\'f3w urz\'b9dzenia\par
+Struktura systemu komputerowego sk\'b3ada si\'ea z 5 zasadniczych warstw tj. warstwa sprz\'eatowa, system operacyjny, programy narz\'eadziowe, programy u\'bfytkowe i u\'bfytkownicy. Sprz\'eat cyzli procesor - zwany te\'bf jednostk\'b9 centraln\'b9, pami\'ea\'e6 i urz\'b9dzenia wej\'9ccia i wyj\'9ccia, to podstawowe zasoby systemu komputerowego. Programy u\'bfytkowe (aplikacje) - kompilatory, systemy baz danych, gry komputerowe lub programy handlowe- okre\'9claj\'b9 sposoby u\'bfycia tych zasob\'f3w do rozwi\'b9zania zada\'f1 stawianych przez u\'bfytkownik\'f3w. Zazwyczaj istnieje wielu r\'f3\'bfnych u\'bfytkownik\'f3w (ludzie, maszyny, inne komputery) zmagaj\'b9cych si\'ea z rozwi\'b9zaniem r\'f3\'bfnych zada\'f1. Odpowiednio do rozmaitych potrzeb mo\'bfe istnie\'e6 wiele r\'f3\'bfnych program\'f3w u\'bfytkowych. System operacyjny nadzoruje i koordynuje pos\'b3ugiwanie si\'ea sprz\'eatem przez r\'f3\'bfne programy u\'bfytkowe, kt\'f3re pracuj\'b9 na zlecenie r\'f3\'bfnych u\'bfytkownik\'f3w.\par
+Sprz\'eat - zapewnia podstawowe mo\'bfliwo\'9cci obliczeniowe (procesor, pami\'ea\'e6, urz\'b9dzenia wej\'9ccia/wyj\'9ccia) - podstawowe zasoby systemu komputerowego.\par
+Oprogramowanie systemowe - kontroluje i koordynuje uzycie zasobo\'f3w sprz\'eatowych poprzez r\'f3\'bfne programy u\'bfytkowe dla r\'f3\'bfnych u\'bfytkownik\'f3w. Warstwa tworzona poprzez tw\'f3rc\'f3w systemu operacyjnego - s\'b9 to zazwyczaj wysoko wyspecjalizowani specjali\'9cci (Iol)\par
+Oprogramowanie narz\'eadziowe - \f7 wspomaga zarz\'b9dzanie zasobami sprz\'eatowymi poprzez dogodne interfejsy u\'bfytkowe oraz usprawnia, modyfikuje oprogramowanie systemowe, zazwyczaj pisane przez niezale\'bfnych programist\'f3w kt\'f3rzy maj\'b9 na celu usprawnienia wykonywania program\'f3w w bardziej wygodny i wydajny spos\'f3b, a przy tym cz\'easto eliminuj\'b9 b\'b3\'eady czy te\'bf niedoci\'b9gni\'eacia oprogramowania systemowego.\par
+Oprogramowanie u\'bfytkowe -  okre\'9claj\'b9 sposoby, w jakie zostaj\'b9 u\'bfyte zasoby systemowe do rozwi\'b9zywania problem\'f3w obliczeniowych zadanych przez u\'bfytkownika (kompilatory, systemy baz danych, gry, oprogramowanie biurowe), tworzone przez programist\'f3w.\par
+U\'bfytkownicy - ludzie, maszyny, inne komputery, maj\'b9 bezpo\'9credni kontakt z oprogramowaniem u\'bfytkowym.\b\f0\par
+Co zawiera blok kontrolny procesu?\par
+\b0 Blok Kontrolny Procesu (ang. Process Control Block, PCB, czasami zwany tak\'bfe Blokiem Kontrolnym Zadania) jest struktur\'b9 danych w j\'b9drze systemu operacyjnego zawieraj\'b9c\'b9 informacje niezb\'eadne do zarz\'b9dzania konkretnym procesem. BKP jest reprezentacj\'b9 procesu w systemie operacyjnym.\b\par
+Co to jest wirtualna przestrze\'f1 adresowa procesu a co to jest przestrze\'f1 fizyczna.\par
+\b0 Wirtualna przestrze\'f1 adresowa procesu - z punktu widzenia procesu ma on do dyspozycji pewien wirtualny obszar pami\'eaci, kt\'f3rego adresy nie maj\'b9 nic wsp\'f3lnego z fizycznymi adresami pami\'eaci fizycznej. Jest to w\'b3a\'9cnie przestrze\'f1 logiczna.\b\par
+Co to jest proces a co to jest program?\par
+\pard\sl240\slmult1\b0\f7 Proces jest elementarn\'b9 jednostk\'b9 pracy (aktywno\'9cci) zarz\'b9dzan\'b9 przez system operacyjny, kt\'f3ra ubiega si\'ea o zasoby systemu komputerowego w celu wykonania programu.\par
+\pard Program \endash  definiuje zachowanie procesu.\par
+\pard\sl240\slmult1 Program jest obiektem pasywnym, natomiast proces jest obiektem aktywnym.\b\par
+\pard\f0 Wymie\'f1 i opisz r\'f3\'bfnice mi\'eadzy synchronicznym a asynchronicznym dost\'eapem do urz\'b9dze\'f1.\par
+\b0 Model asynchroniczny polega na stworzeniu tzw. \'9crodowiska edukacyjnego, na kt\'f3re sk\'b3adaj\'b9 si\'ea odpowiednie materia\'b3y dydaktyczne tworz\'b9ce prywatne \'9crodowisko pracy studenta. U\'bfytkownik wykorzystuje je do oanowania okre\'9clonej wiedzy, wykonania zada\'f1 i \'e6wicze\'f1, a prowadz\'b9cy kurs ma mo\'bfliwo\'9c\'e6 kontroli jego post\'eap\'f3w. Elementy takiego podej\'9ccia zawiera, przedstawiony w dalszej cz\'ea\'9cci opracowania, "Symulator atak\'f3w na prze\'b3\'b9czniki Ethernetowe".\b\par
+Co rozumiesz pod poj\'eaciem procesu? Z czego sk\'b3ada si\'ea proces?\par
+\b0\f7 Proces jest elementarn\'b9 jednostk\'b9 pracy zarz\'b9dzan\'b9 przez system operacyjny, kt\'f3ra ubiega si\'ea o zasoby systemu komputerowego w celu wykonania programu. Sklada si\'ea z : program, dane (stos, sterta), zbi\'f3r zasob\'f3w tworz\'b9cych \'9crodowisko wykonawcze, blok kontrolny procesu, bie\'bf\'b9ca czynno\'9c\'e6.\b\f0\par
+Co to jest planista przydzia\'b3u procesora?\par
+\b0 Planista (algorytm szeregowania) - to algorytm rozdzielaj\'b9cy czas procesora i dost\'eap do innych zasob\'f3w pomi\'eadzy zadania, kt\'f3re w praktyce zwykle o te zasoby konkuruj\'b9.\f8\fs24 .\b\f0\fs20\par
+Wymie\'f1 i scharakteryzuj po jednym zdaniu znane ci algorytmy planowania przydzia\'b3u procesora.\par
+\pard\sl240\slmult1\b0\f7 Algorytmy planowania:\par
+\pard\endash  Pierwszy zg\'b3oszony pierwszy obs\'b3u\'bfony (FCFS \endash  first come first serve)\par
+\endash  Najpierw najkr\'f3tsze zadanie (SJF - Shortest Job First)\par
+\endash  Planowanie priorytetowe\par
+\endash  Planowanie rotacyjne (RR \endash  round-robin)\b\f0\par
+Czym r\'f3\'bfni si\'ea w\'b9tek od procesu?\par
+\pard\sl240\slmult1\b0\f7 W\'b9tek to jednostka wykonawcza w obr\'eabie jednego procesu, b\'ead\'b9ca kolejnym ci\'b9giem instrukcji wykonywanym w obr\'eabie tych samych danych (w tej samej przestrzeni adresowej). W jednym procesie mo\'bfe by\'e6 kilka w\'b9tk\'f3w. W\'b9tki tego samego procesu korzystaj\'b9 ze wsp\'f3lnego kodu i danych, maj\'b9 jednak oddzielne stosy.\b\f0\par
+\pard Do czego mo\'bfna wykorzystywa\'e6 semafory?\par
+\b0\f7 Kiedy w\'b9tki s\'b9 wsp\'f3\'b3bie\'bfne cz\'easto dochodzi do utraty sp\'f3jno\'9cci danych i w konsekwencji program dziala bl\'eadnie. Semafory slu\'bf\'b9 do synchronizacji w\'b9tk\'f3w i zapobiegaj\'b9 wyst\'eapowaniu b\'b3\'ead\'f3w.\b\f0\par
+Co to jest op\'f3\'9fnienie ekspedycji?\par
+\b0\f7 Czas od momentu zg\'b3oszenia do momentu rozpocz\'eacia wykonywania zadania.\b\f0\par
+Na jakie kategorie dzielimy urz\'b9dzenia ze wzgl\'eadu na spos\'f3b dost\'eapu do danych?\par
+\b0\f7 Sekwencyjny- dost\'eap do danych w okre\'9clonej kolejno\'9cci, aby odczyta\'e6 caly bajt musimy wczyta\'e6 caly strumie\'f1 danych (przyk\'b3ad ta\'9cma z backupem)\par
+Swobodny- mamy dost\'eap do wolnej informacji poprzez pozycj\'ea w strumieniu danych (przyk\'b3ad: sektor dysku twardego)\b\f0\par
+Czym r\'f3\'bfni si\'ea komunikacja za pomoc\'b9 rejestr\'f3w i magistrali?\par
+\pard\sl240\slmult1\b0\f7 Port - jedno urz\'b9dzenie wykorzystuje fizyczn\'b9 wi\'b9zk\'ea przewod\'f3w [\endash  FireWire, USB, RS 232 (porty szeregowe), - LPT \endash  port r\'f3wnoleg\'b3y, BlueTooth]\par
+\pard Magistrala (szyna komunikacyjna): - do jednej wi\'b9zki przewod\'f3w do\'b3\'b9czonych jest kilka urz\'b9dze\'f1\b\f0\par
+Przedstaw schemat asynchronicznej komunikacji z urz\'b9dzeniami.\par
+\pard\tx5680\b0\f8\fs24 Synchroniczny\~:\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~ \par
+\f7\fs20 -Po rozpocz\'eaciu procedury\tab\tab\tab\tab\par
+\pard We/Wy program u\'bfytkownika\par
+odzyskuje kontrol\'ea po zako\'f1czeniu\par
+\pard\sl240\slmult1 wymiany informacji We/Wy.\par
+--------------------------------------------------------------\par
+  \tab Proces zamawiaj\'b9cy\tab\par
+  |  ------------------oczekiwanie---------------\tab ^\par
+--|---------------------------------------------------------|-\par
+--|---------------------------------------------------------|-\par
+  |\tab mod\'f3\'b3 steruj\'b9cy urz\'b9dzenia\tab |\par
+--*---------------------------------------------------------|-\par
+  *\tab procedura obs\'b3ugi przerwania\tab |\par
+--*---------------------------------------------------------|-\par
+  |---------\tab sprz\'eatowe przesy\'b3anie danych----|\par
+--------------------------------------------------------------\f8\fs24\par
+Asynchroniczny\par
+\pard\f6\fs20\endash\f7  Po rozpocz\'eaciu procedury We/Wy\par
+program uzytkownika odzyskuje\par
+natychmiast kontrol\'ea.\par
+\f6\endash\f7  System komputerowy musi\par
+posiada\'e6 tablic\'ea urz\'b9dze\'f1, kt\'f3ra\par
+b\'eadzie przechowywac aktualny\par
+\pard\sl240\slmult1 stan (idle-wolny lub busy-zaj\'eaty).\par
+--------------------------------------------------------------\par
+  \tab Proces zamawiaj\'b9cy\tab\par
+  |  ^-----------------oczekiwanie---------------    ^\par
+--|--|------------------------------------------------------|-\par
+--|--|------------------------------------------------------|-\par
+  |  |\tab mod\'f3\'b3 steruj\'b9cy urz\'b9dzenia\tab |\par
+--*--*------------------------------------------------------|-\par
+  *  *\tab procedura obs\'b3ugi przerwania\tab |\par
+--*--*------------------------------------------------------|-\par
+  |**|****sprz\'eatowe przesy\'b3anie danych****|\par
+--------------------------------------------------------------\f8\fs24\par
+\b\f0\fs20\par
+\pard Co rozumiesz pod skr\'f3tem DMA? Kr\'f3tko opisz na czym polega.\par
+\b0 DMA (Direct Memory Access) - bezpo\'9credni dost\'eap do pami\'eaci\b\par
+Kiedy generowane s\'b9 przerwania?\par
+\b0 W momencie gdy urz\'b9dzenie posiada dane do odczytania przez procesor - zg\'b3asza do niego przerwanie.\b\par
+Jakie znasz klasy przerwa\'f1?\par
+\pard\sl240\slmult1\b0\f7 - przerwanie niemaskowalne\par
+\pard - przerwanie maskowalne (u\'bfywane przez urz\'b9dzenia do zg\'b3aszania \'bf\'b9da\'f1 obs\'b3ugi)\b\f0\par
+Uporz\'b9dkuj poni\'bfsze rodzaje pami\'eaci pod wzgl\'eadem szybko\'9cci dost\'eapu od najszybszego do najwolniejszego: ta\'9cmy magnetyczne, rejestry, twardy dysk, pami\'ea\'e6 podr\'eaczna, pami\'ea\'e6 g\'b3\'f3wna, dyski optyczne.\par
+\b0 rejestry >> pami\'ea\'e6 podr\'eaczna >> pami\'ea\'e6 g\'b3\'f3wna >> dyski optyczne >> ta\'9cmy magnetyczne\b\par
+Co to jest wirtualna przestrze\'f1 adresowa procesu?\par
+\b0 Wirtualna przestrze\'f1 adresowa procesu - z punktu widzenia procesu ma on do dyspozycji pewien wirtualny obszar pami\'eaci, kt\'f3rego adresy nie maj\'b9 nic wsp\'f3lnego z fizycznymi adresami pami\'eaci fizycznej. Jest to w\'b3a\'9cnie przestrze\'f1 logiczna.\par
+\b Ustosunkuj si\'ea do nast\'eapuj\'b9cego stwierdzenia: "Partycja/plik wymiany to metoda na przyspieszenia dzia\'b3ania program\'f3w komputerowych."\par
+\b0 Poprzez plik wymiany mo\'bfna zwalnia\'e6 cz\'ea\'9c\'e6 pami\'eaci(zapisuj\'b9c j\'b9 do pliku wymiany) zajmowanej przez programy nieu\'bfywane, przez co programy u\'bfywane maj\'b9 do dyspozycji wi\'eacej pami\'eaci i w rezultacie mamy wi\'eaksz\'b9 wydajno\'9c\'e6.\b\par
+Ustosunkuj si\'ea do nast\'eapuj\'b9cego stwierdzenia: " Segmentacja pami\'eaci operacyjnej jest realizowana tylko programowo przez system operacyjny."\par
+\b0 Nowsze pami\'eaci operacyjne s\'b9 podzielone na pojedyncze bloki, ka\'bfdy blok ma adres(segmentacja?), starsze pami\'eacy by\'b3y segmentowane na bloki wi\'eacy ne tylko system segmentuje pami\'ea\'e6.\b\par
+Na czym polega technika wymiatania pami\'eaci przy wykorzystywaniu pami\'eaci w plikach/partycjach wymiany?\par
+\b0\f7 Polega na usuwaniu pami\'eaci fizycznej proces\'f3w, kt\'f3re aktualnie s\'b9 zawieszone lub przez d\'b3ugi czas oczekuj\'b9 na jakie\'9c zdarzenia.\b\f0\par
+Na czym polega technika stronicowania pami\'eaci przy wykorzystywaniu pami\'eaci w plikach/partycjach wymiany?\par
+\b0\f7 Stronicowanie polega na zapami\'eataniu pewnych rzadko u\'bfywanych stron pami\'eaci operacyjnej w specjalnym pliku na dysku twardym (dysk wymiany) lub na specjalnej partycji wymiany.\par
+\b\f0 Do czego s\'b3u\'bfy MMU?\par
+\b0 MMU (Memory Management Unit), to zestaw uk\'b3ad\'f3w realizuj\'b9cych dost\'eap do pami\'eaci fizycznej \'bf\'b9danej przez CPU. W\'9cr\'f3d zada\'f1 tych uk\'b3ad\'f3w znajduj\'b9 si\'ea funkcje translacji pami\'eaci wirtualnej do pami\'eaci fizycznej, ochron\'ea pami\'eaci, obs\'b3ug\'ea pami\'eaci podr\'eacznej, zarz\'b9dzanie szynami danych oraz, w prostszych (szczeg\'f3lnie 8-bitowych) systemach, prze\'b3\'b9czanie bank\'f3w pami\'eaci.\b\par
+Zamie\'f1 na posta\'e6 liczbow\'b9 nast\'eapuj\'b9ce uprawnienia: rwxr-xr--\par
+\lang1033\b0\f9 r - 4\par
+w - 2\par
+x - 1\par
+rwx = 4+2+1=7\par
+Uprawnienia \i rwxr-x--- \i0 beda przedstawione w postaci liczbowej jako \i 750\lang1045\b\i0\f0\par
+Wymie\'f1 znane Ci cechy systemu operacyjnego linux.\par
+\pard\fi-360\li360\b0\f8 - Oparty na Unixie\par
+\pard - Wysoki poziom bezpiecze\'f1stwa\fs24\par
+\fs20 - Niezale\'bfno\'9c\'e6 od architektury systemu\fs24\par
+\fs20 - Wysoka wydajno\'9c\'e6\fs24\par
+\fs20 - obs\'b3uga wielu system\'f3w plik\'f3w\fs24\par
+\fs20 - Dojrza\'b3y, stabilny i przetestowany w rozmaitych trudnych warunkach\fs24\par
+\fs20 - Wysoce konfigurowalny\fs24\par
+\fs20 - Darmowy i wolny (swoboda u\'bfytkowania, modyfikacji i redystrybucji)\fs24\par
+\fs20 - Szybka reakcja na b\'b3\'eady - po wykryciu b\'b3\'eadu poprawki pojawiaj\'b9 si\'ea w ci\'b9gu godzin, najwy\'bfej dni. \fs24\par
+\fs20 - Du\'bfa liczba aplikacji do rozmaitych, bardziej lub mniej profesjonalnych zastosowa\'f1. \fs24\par
+\fs20 - Wygodna obs\'b3uga i efektowny pulpit w \'9crodowiskach KDE i GNOME.\b\f0\par
+Wymie\'f1 znane Ci stany proces\'f3w.\par
+\b0\f8 Nowy (new) \endash  proces zosta\'b3 utworzony\par
+Aktywny (running) \endash  wykonywane s\'b9 instrukcje\fs24\par
+\fs20 Czekaj\'b9cy (waiting) \endash  czeka na wyst\'b9pienie zdarzenia\fs24\par
+\fs20 Gotowy (ready) \endash  czeka na przydzia\'b3 procesora\fs24\par
+\fs20 Zako\'f1czony (terminated) \endash  zako\'f1czy\'b3 dzia\'b3anie\b\f0\par
+Wymie\'f1 cele zarz\'b9dzania pami\'eaci\'b9 przez SO (system operacyjny).\par
+\b0\f8 - Aby wiele proces\'f3w mog\'b3o by\'e6 wykonywanych \ldblquote w tym samym czasie\rdblquote\par
+- Aby oszcz\'eadza\'e6 miejsce w pami\'eaci\fs24\par
+\fs20 - Aby przyspieszy\'e6 dost\'eap do pami\'eaci\fs24\par
+\fs20 - Aby unikn\'b9\'e6 fragmentacji.\b\f0\par
+Scharakteryzuj typy urz\'b9dze\'f1 blokowych oraz tekstowych. Podaj przyk\'b3ady. Podkre\'9cl g\'b3\'f3wn\'b9 r\'f3\'bfnic\'ea.\par
+\ul\b0\f8 Urz\'b9dzenia blokowe\ulnone : programy uzyskuj\'b9 dost\'eap do blok\'f3w pami\'eaci o ustalonej wielko\'9cci. Maj\'b9 rozmiar ca\'b3kowity. \ul Przyk\'b3ad\ulnone : Dyski twarde\fs24\par
+\ul\fs20 Urz\'b9dzenia znakowe\ulnone : wsp\'f3\'b3pracuj\'b9 ze strumieniami danych. Mo\'bfliwy jest tylko zapis/odczyt. System nie zapami\'eatuje \'bfadnych danych na temat wykonanych operacji. \ul Przyk\'b3ad\ulnone : Drukarka\b\f0\par
+Czym r\'f3\'bfni si\'ea stronicowanie pami\'eaci (paging) od wymiatania pami\'eaci (swaping)?\par
+\ul\b0\f8 Stronicowanie\ulnone  zezwala na fizyczn\'b9 nieci\'b9g\'b3o\'9c\'e6 przestrzeni adresowej, dlatego konkretnego procesu nie trzeba \ldblquote wk\'b3ada\'e6\rdblquote  do miejsca w pami\'eaci, gdzie jest wystarczaj\'b9co miejsca na ca\'b3y proces tylko mo\'bfna go \ldblquote poupycha\'e6\rdblquote  w wolne miejsca, jednak spowalnia to dost\'eap do pami\'eaci. W \ul wymiataniu\ulnone  chodzi o to, \'bfe procesy, kt\'f3re akurat nic nie robi\'b9 s\'b9 przenoszone do pami\'eaci pomocniczej a w wolne miejsce wprowadzany jest aktywny proces.\b\f0\par
+Wymie\'f1 znane Ci no\'9cniki stosowane w sieciach komputerowych\par
+\pard\fi-360\li360\b0\f8 - Kable koncentryczne, - Kable miedziane, - Kable \'9cwiat\'b3owodowe, - Fale radiowe (WiFi 802.11a/b/g)\b\f0\par
+\pard Wymie\'f1 znane Ci typy okablowania w sieciach komputerowych.\par
+\pard\fi-360\li360\b0\f8 - Kable koncentryczne (np. BNC)\par
+\pard - Kable miedziane (skr\'eatka np. UTP (nieekranowana), STP (ekranowana), FTP (foliowana), SFTP (ekranowana i foliowana))\fs24\par
+\fs20 - Kable \'9cwiat\'b3owodowe (pasowe, w\'b3\'f3kniste, warstwowe)\b\f0\par
+Wymie\'f1 znane Ci standardy sieci ethernet.\par
+\pard\tx1440\b0\f8 - Ethernet 802.2, - Ethernet 802.3, - Ethernet II, - Ethernet SNAP, - Ethernet 802.11 (bezprzewodowy),\fs24\par
+\pard\fs20 - Fast Ethernet, - Gigabit Ethernet, - 10 Gigabit Ethernet, - Xerox Ethernet.\b\f0\par
+Wymie\'f1 wady i zalety sieci opartej na strukturze szyny oraz gwiazdy.\par
+\ul\b0\f8 Wady magistrali\ulnone :\fs24\par
+\fs20 - Przerwanie przewodu w jednym punkcie uniemo\'bfliwia dzia\'b3anie ca\'b3ej sieci\par
+- S\'b3aba skalowalno\'9c\'e6\fs24\par
+\fs20 - Stosunkowo du\'bfa awaryjno\'9c\'e6\fs24\par
+\fs20 - Jedna ogromna nadawcza domena kolizyjna\fs24\par
+\ul\fs20 Zalety magistrali\ulnone :\fs24\par
+\fs20 - \'a3atwo\'9c\'e6 instalacji\par
+- Niska cena zbudowania takiej sieci\fs24\par
+\fs20 - Brak potrzeby stosowania urz\'b9dze\'f1 centralnych\par
+- Oszcz\'eadno\'9c\'e6 w okablowaniu\fs24\par
+\ul\fs20 Wady gwiazdy\ulnone : \fs24\par
+\fs20 - Wymagane urz\'b9dzenie centralne\par
+- Ka\'bfde urz\'b9dzenie musi by\'e6 pod\'b3\'b9czone bezpo\'9crednio do urz\'b9dzenia centralnego\fs24\par
+\fs20 - Stosunkowo du\'bfe ilo\'9cci kabli\fs24\par
+\ul\fs20 Zalety gwiazdy\ulnone :\fs24\par
+\fs20 - Przerwanie w jednym punkcie nie odcina wszystkich u\'bfytkownik\'f3w\par
+- W zasadzie dowolne rozmieszczenie stacji roboczych w ramach standardu okablowania\fs24\par
+\fs20 - Znikoma awaryjno\'9c\'e6\fs24\par
+\fs20 - Stosunkowo ma\'b3e nadawcze domeny kolizyjne\b\f0\par
+Scharakteryzuj struktur\'ea sieci typu 100Base-Tx.\par
+\pard\cbpat4\qj\ul\b0\f8 100BASE-TX\ulnone  to jedna z technologii nale\'bf\'b9cych do standardu\cf1  \fs24{\field{\*\fldinst{HYPERLINK "http://pl.wikipedia.org/wiki/Ethernet" }}{\fldrslt{Ethernet}}}\f8\fs20 , pozwalaj\'b9ca na komunikowanie si\'ea urz\'b9dze\'f1 w sieciach lokalnych \fs24{\field{\*\fldinst{HYPERLINK "http://pl.wikipedia.org/wiki/LAN" }}{\fldrslt{LAN}}}\f8\fs20  z pr\'eadko\'9cci\'b9 100 Mb/s. Ze wzgl\'eadu na dziesi\'eaciokrotne zwi\'eakszenie pr\'eadko\'9cci w stosunku do poprzedniego standardu, nazywana jest ona \fs24{\field{\*\fldinst{HYPERLINK "http://pl.wikipedia.org/wiki/FastEthernet" }}{\fldrslt{FastEthernet}}}\f8\fs20 . Technologia 100Base-TX nale\'bfy do pierwszej warstwy modelu sieci OSI/ISO \endash  warstwy fizycznej. Najpierw 2 parowa, potem 4 parowa, w tym dwie pary do transmisji. Medium transmisyjnym jest miedziana \fs24{\field{\*\fldinst{HYPERLINK "http://pl.wikipedia.org/wiki/Skr\'eatka_nieekranowana" }}{\fldrslt{skr\'eatka nieekranowana}}}\f8\fs20  \fs24{\field{\*\fldinst{HYPERLINK "http://pl.wikipedia.org/wiki/UTP" }}{\fldrslt{UTP}}}\f8\fs20  kategorii 5, zako\'f1czona obustronnie z\'b3\'b9czem \fs24{\field{\*\fldinst{HYPERLINK "http://pl.wikipedia.org/wiki/RJ-45" }}{\fldrslt{RJ-45}}}\f8\fs20 . Specyfik\'ea \cf0 technologii mo\'bfna wyczyta\'e6 z jej nazwy, gdy\'bf przedrostek 100 oznacza pr\'eadko\'9c\'e6 transmisji podana w Mb na sekund\'ea, \'84Base\rdblquote  oznacza transmisj\'ea cyfrow\'b9 czyli w pa\'9cmie podstawowym (w odr\'f3\'bfnieniu od \'84Broad\rdblquote  \endash  transmisji analogowej czyli szerokopasmowej), a oznaczenie TX oznacza skr\'eatk\'ea miedzian\'b9 kategorii 5 lub wy\'bfszej. Istniej\'b9 technologie wykorzystuj\'b9ce skr\'eatk\'ea o ni\'bfszej kategorii, w takim przypadku oznaczane s\'b9 T co oznacza po prostu skr\'eatk\'ea miedzian\'b9. Technologia 100Base-TX stosowana jest w sieciach o topologii gwiazdy. Maksymalna d\'b3ugo\'9c\'e6 kabla pomi\'eadzy urz\'b9dzeniami, nie powoduj\'b9ca wyt\'b3umienia sygna\'b3u, kt\'f3re uniemo\'bfliwia\'b3oby prawid\'b3owy odbi\'f3r danych, wynosi 100 metr\'f3w.\b\f0\par
+\pard Scharakteryzuj struktur\'ea sieci typu 10Base-T2 (BNC).\par
+\pard\qj\ul\b0\f8 10Base2\ulnone  opisuje protok\'f3\'b3 sieciowy dla pasma podstawowego i pr\'eadko\'9cci 10 Mbps. Stosowany jest 50-omowy kabel koncentryczny o maksymalnej d\'b3ugo\'9cci 185 metr\'f3w zaokr\'b9glone do 200m. Przew\'f3d do karty sieciowej przy\'b3\'b9cza si\'ea za pomoc\'b9 rozga\'b3\'ea\'9fnika (T-connector). Mo\'bfna po\'b3\'b9czy\'e6 do pi\'eaciu segment\'f3w magistrali, u\'bfywaj\'b9c czterech repeater\'f3w, przy czym stacje robocze mog\'b9 by\'e6 w\'b3\'b9czone do trzech segment\'f3w, pozosta\'b3e s\'b3u\'bf\'b9 do przed\'b3u\'bfenia sieci. Maksymalna d\'b3ugo\'9c\'e6 magistrali wynosi 910 m. Do jednej magistrali mo\'bfna do\'b3\'b9czy\'e6 najwy\'bfej 30 odga\'b3\'eazie\'f1 (r\'f3wnie\'bf: repeatery, mosty, routery i serwery). Ca\'b3kowita liczba odga\'b3\'eazie\'f1 we wszystkich segmentach sieci nie mo\'bfe przekroczy\'e6 1024. Na ka\'bfdym ko\'f1cu magistrali nale\'bfy przy\'b3\'b9czy\'e6 terminator.\b\f0\par
+\pard Czym r\'f3\'bfni si\'ea kabel typu UTP od kabla typu STP.\par
+\pard\qj\ul\b0\f8 Skr\'eatka ekranowana, STP\ulnone  (Shielded Twisted Pair) \endash  jeden z rodzaj\'f3w skr\'eatki. Jest podobna z zewn\'b9trz do \ul skr\'eatki nieekranowanej UTP\ulnone . R\'f3\'bfnica polega na tym, i\'bf skr\'eatka ekranowana posiada dodatkowy ekran otaczaj\'b9cy ca\'b3y kabel, co umo\'bfliwia przesy\'b3anie danych na wi\'eaksze odleg\'b3o\'9cci i z wi\'eaksz\'b9 transmisj\'b9. Dodatkowo tak\'bfe informacje przesy\'b3ane za jej pomoc\'b9 w mniejszym stopniu ulegaj\'b9 zak\'b3\'f3ceniom zewn\'eatrznym (pole magnetyczne) takim jak przes\'b3uch. Przepustowo\'9c\'e6 skr\'eatki zale\'bfna jest od tzw. kategorii. Maksymalna d\'b3ugo\'9c\'e6 po\'b3\'b9cze\'f1 dla UTP wynosi 100 m, natomiast dla STP 250 m. Limit ten mo\'bfna oczywi\'9ccie przekroczy\'e6 u\'bfywaj\'b9c repeatera. Obydwa rodzaje skr\'eatki posiadaj\'b9 impedancj\'ea 100 ohm\'f3w. Dla wi\'eakszo\'9cci zastosowa\'f1 nieekranowane okablowanie UTP jest wystarczaj\'b9ce. Jednak nie we wszystkich przypadkach, mo\'bfna tu np. zaliczy\'e6: - \'9crodowisko z do\'9c\'e6 du\'bfym poziomem zak\'b3\'f3ce\'f1 elektromagnetycznych (np. lotniska), - \'9crodowiska wra\'bfliwe na emisj\'ea pochodz\'b9c\'b9 z okablowania informatycznego (np. laboratoria, szpitale), - budynki, w kt\'f3rych istnieje potrzeba zapewnienia zgodno\'9cci elektromagnetycznej wed\'b3ug mi\'eadzynarodowych lub lokalnych regulacji prawnych. Dla tych "trudnych" \'9crodowisk, rozwi\'b9zaniem jest okablowanie ekranowane STP.\b\f0\par
+\pard Ile par skr\'eatki wykorzystywane jest do transmisji w sieciach typu 100Base-Tx.\par
+\pard\fi-357\li357\b0\f8 - 2 pary do przesy\'b3u danych i po jednej na telefon i kana\'b3 alarmowy\b\f0\par
+\pard Ile par skr\'eatki wykorzystywane jest do transmisji w sieciach typu HP 100VG.\par
+\pard\fi-357\li357\b0\f8 - Wszystkie 4 pary w skr\'eatce s\'b3u\'bf\'b9 do przesy\'b3u danych\b\f0\par
+\pard Dlaczego stosuje si\'ea skr\'eatk\'ea, a nie ta\'9cm\'ea w kablach LAN.\par
+\b0\f8 Je\'bfeli chodzi tu o splatanie kabli, czyli skr\'eacanie ich to jest to robione, aby przeciwdzia\'b3a\'e6 polu magnetycznemu. Okr\'eacenie kabli wok\'f3\'b3 siebie zmniejsza ich podatno\'9c\'e6 na przes\'b3uchy.\b\f0\par
+Jak\'b9 rol\'ea pe\'b3ni\'b9 terminatory w sieci opartej o kabel BNC.\par
+\b0\f8 Terminator jest specjalnie dobranym rezystorem symuluj\'b9cym niesko\'f1czenie d\'b3ugi kabel, eliminuj\'b9cym w ten spos\'f3b odbicia sygna\'b3u od ko\'f1ca kabla mog\'b9ce zak\'b3\'f3ci\'e6 prac\'ea odbiornik\'f3w.\b\f0\par
+Wyja\'9cnij przeznaczenie nast\'eapuj\'b9cych urz\'b9dze\'f1 sieciowych: mostek (brid\'bfe),\par
+\pard\qj\ul\b0\f8 Most\ulnone  lub mostek to urz\'b9dzenie warstwy \'b3\'b9cza danych modelu OSI/ISO decyduj\'b9ce o przesy\'b3aniu ramek danych (czyli pakiet\'f3w danych warstwy 2) na podstawie stworzonej przez siebie tablicy forwardingu (ang. Forwarding DataBase \endash  FDB lub MAC DataBase), zawieraj\'b9cej numery port\'f3w/interfejs\'f3w, do kt\'f3rych przy\'b3\'b9czone s\'b9 urz\'b9dzenia, oraz adresy sprz\'eatowe MAC urz\'b9dze\'f1 w segmencie sieci. Mo\'bfna wyr\'f3\'bfni\'e6 \ul mosty prze\'9froczyste\ulnone , \ul LSB\ulnone  oraz realizuj\'b9ce \ul Routing \'9fr\'f3d\'b3owy\ulnone :\par
+\pard\fi-360\li360\ul Mosty przezroczyste\ulnone  zwane te\'bf ucz\'b9cymi si\'ea lub inteligentnymi, stosowane s\'b9 w sieciach typu Ethernet. Tu\'bf po zainstalowaniu urz\'b9dzenie rozpoczyna proces poznawania topologii sieci. Tablica mostu jest stale aktualizowana. Mosty przezroczyste w rozleg\'b3ych sieciach dzia\'b3aj\'b9 w oparciu o algorytm STA.\par
+\ul Mosty LSB\ulnone  tak\'bfe stosowane s\'b9 w sieciach Ethernet. Pozwalaj\'b9 na u\'bfywanie tej rezerwowej linii, kt\'f3ra jest nie wykorzystana w bridge'ach przezroczystych. S\'b9 wi\'eac przez to najwydajniejsze.\par
+\ul Mosty realizuj\'b9ce Routing \'9fr\'f3d\'b3owy\ulnone  dzia\'b3aj\'b9 w sieciach Token Ring. Poza informacj\'b9 o miejscu docelowym pakiet\'f3w, most w tym wypadku wie tak\'bfe kt\'f3r\'eady najlepiej je tam przes\'b3a\'e6. Przy czym to nie urz\'b9dzenie wybiera optymaln\'b9 tras\'ea, lecz odczytuje je z danych zawartych w samych pakietach.\b\f0\par
+\pard Koncentrator (hub), prze\'b3\'b9cznik sieciowy (switch), traser (router), zapora ogniowa (firewall).\par
+\pard\fi-360\li360\qj\ul\b0\f8 Hub\ulnone  - urz\'b9dzenie \'b3\'b9cz\'b9ce wiele urz\'b9dze\'f1 sieciowych w sieci komputerowej o topologii gwiazdy. Hub najcz\'ea\'9cciej pod\'b3\'b9czany jest do routera, za\'9c do huba pod\'b3\'b9czane s\'b9 komputery b\'ead\'b9ce stacjami roboczymi lub serwerami, drukarki sieciowe oraz inne urz\'b9dzenia sieciowe. Koncentrator pracuje w warstwie pierwszej modelu ISO/OSI (warstwie fizycznej), kopiuj\'b9c sygna\'b3 z jednego portu na wszystkie pozosta\'b3e, z tego powodu Huby osi\'b9gaj\'b9 maksymaln\'b9 przepustowo\'9c\'e6 10Mb/s. Hub przenosi z wej\'9ccia na wszystkie wyj\'9ccia sygna\'b3 bit po bicie. Huby dzia\'b3aj\'b9 w trybie Half-Duplex.\par
+\ul Switch\ulnone   \endash  urz\'b9dzenie \'b3\'b9cz\'b9ce segmenty sieci komputerowej. Switch pracuje w warstwie drugiej modelu OSI (\'b3\'b9cza danych), jego zadaniem jest przekazywanie ramek mi\'eadzy segmentami. Switch okre\'9cla si\'ea te\'bf mianem wieloportowych most\'f3w lub inteligentnych hub\'f3w \endash  switch u\'bfywa logiki podobnej jak w przypadku mostu do przekazywania ramek tylko do docelowego segmentu sieci (a nie do wszystkich segment\'f3w jak hub), ale umo\'bfliwia po\'b3\'b9czenie wielu segment\'f3w sieci w gwiazd\'ea jak hub (nie jest ograniczony do \'b3\'b9czenia dw\'f3ch segment\'f3w jak most). W przeciwie\'f1stwie do koncentrator\'f3w, prze\'b3\'b9czniki dzia\'b3aj\'b9 w trybie Full-Duplex. Prze\'b3\'b9czniki dzia\'b3aj\'b9 w oparciu o jeden z dw\'f3ch tryb\'f3w pracy: cut through (prze\'b3\'b9czanie bezzw\'b3oczne) oraz store&forward (zapami\'eataj i wy\'9clij).\par
+\ul Router\ulnone  \endash  to urz\'b9dzenie sieciowe, kt\'f3re okre\'9cla nast\'eapny punkt sieciowy, do kt\'f3rego nale\'bfy skierowa\'e6 pakiet danych. Ten proces nazywa si\'ea routingiem b\'b9d\'9f trasowaniem. Routing odbywa si\'ea w warstwie trzeciej modelu OSI. Router u\'bfywany jest przede wszystkim do \'b3\'b9czenia ze sob\'b9 sieci WAN, MAN i LAN. Routing jest najcz\'ea\'9cciej kojarzony z protoko\'b3em IP, cho\'e6 procesowi trasowania mo\'bfna podda\'e6 datagramy dowolnego protoko\'b3u routowalnego np. protoko\'b3u IPX w sieciach obs\'b3ugiwanych przez NetWare (sieci Novell). Aby m\'f3g\'b3 zaj\'9c\'e6 Routing, router musi by\'e6 pod\'b3\'b9czony przynajmniej do dw\'f3ch podsieci. Aby router m\'f3g\'b3 realizowa\'e6 Routing pakiet\'f3w i wybiera\'e6 optymalne trasy Routingu, niezb\'eadna jest mu wiedza na temat otaczaj\'b9cych go urz\'b9dze\'f1. Wiedza ta mo\'bfe by\'e6 dostarczona w spos\'f3b statyczny przez administratora i nosi w\'f3wczas nazw\'ea tablicy statycznej lub router mo\'bfe j\'b9 pozyska\'e6 dynamicznie od innych urz\'b9dze\'f1 warstwy 3 - tablice takie nazywane s\'b9 dynamicznymi. Do wyznaczania i obs\'b3ugi tablic dynamicznych router wykorzystuje protoko\'b3y Routingu.\par
+\ul Zapora sieciowa\ulnone  \endash  jeden ze sposob\'f3w zabezpieczania sieci i system\'f3w przed intruzami. Termin ten mo\'bfe odnosi\'e6 si\'ea zar\'f3wno do dedykowanego sprz\'eatu komputerowego wraz ze specjalnym oprogramowaniem, jak i do samego oprogramowania blokuj\'b9cego niepowo\'b3any dost\'eap do komputera. Pe\'b3ni rol\'ea po\'b3\'b9czenia ochrony sprz\'eatowej i programowej sieci wewn\'eatrznej LAN przed dost\'eapem z zewn\'b9trz. Do jego podstawowych zada\'f1 nale\'bfy filtrowanie po\'b3\'b9cze\'f1 wchodz\'b9cych i wychodz\'b9cych oraz tym samym odmawianie \'bf\'b9da\'f1 dost\'eapu uznanych za niebezpieczne. Najcz\'ea\'9cciej u\'bfywanymi technikami obrony s\'b9: -filtrowanie pakiet\'f3w, czyli sprawdzanie pochodzenia pakiet\'f3w i akceptowanie po\'bf\'b9danych -stosowanie algorytm\'f3w identyfikacji u\'bfytkownika (has\'b3a, cyfrowe certyfikaty) -zabezpieczanie program\'f3w obs\'b3uguj\'b9cych niekt\'f3re protoko\'b3y (np. FTP, TELNET) Bardzo wa\'bfn\'b9 funkcj\'b9 zapory przeciwogniowej jest monitorowanie ruchu sieciowego i zapisywanie najwa\'bfniejszych zdarze\'f1 do dziennika (Log-u). Umo\'bfliwia to administratorowi wczesne dokonywanie zmian konfiguracji.\b\f0\par
+\pard Czym r\'f3\'bfni si\'ea koncentrator od prze\'b3\'b9cznika (switche'a)?\par
+\ul\b0\f8 Hub\ulnone  pracuje w 1 warstwie modelu OSI/ISO, przesy\'b3aj\'b9c bit po bicie na wszystkie porty poza \'9fr\'f3d\'b3owym. Hub zwykle nie analizuje tego co przesy\'b3a. Tworzy jedn\'b9 ogromn\'b9 fal\'ea pakiet\'f3w, kt\'f3r\'b9 zasypuje wszystkie stacje robocze, co mo\'bfe powodowa\'e6 kolizje. Koncentrator pracuje w trybie Half-Duplex.\par
+\ul Natomiast Switch\ulnone  pracuje w 2 warstwie modelu OSI/ISO, przesy\'b3aj\'b9c ramki. Prze\'b3\'b9cznik u\'bfywa logiki do okre\'9clenia, gdzie dany pakiet wys\'b3a\'e6, mo\'bfna tak\'bfe zbada\'e6 poprawno\'9c\'e6 pakietu danych (np. d\'b3ugo\'9c\'e6 ramki). Nie tworzy ogromnych domen kolizyjnych. Najnowsze prze\'b3\'b9czniki warstwy 3 potrafi\'b9 analizowa\'e6 ruch w sieci i eliminowa\'e6 niemal wszystkie b\'b3\'eady. Switch pracuje w trybie Full-Duplex.\b\f0\par
+Jakie serwisy mog\'b9 nadawa\'e6 numer IP na podstawie adresu MAC w sieciach LAN.\par
+\pard\fi-360\li360\b0\f8 Protoko\'b3y ARP, RARP, BOOTP, DHCP\b\f0\par
+\pard Jakie informacje udost\'eapnia klientom serwer BOOTP?\par
+\ul\b0\f8 Umo\'bfliwia pobieranie konfiguracji z sieci\ulnone :\fs24\par
+\fs20 Adres IP klienta, przydzielony adres IP klienta, adres IP serwera, adres IP bramki, adres sprz\'eatowy klienta (16 oktet\'f3w), nazwa serwera (64 oktety), plik startowy (128 oktet\'f3w), opcje producenta (64 oktety).\b\f0\par
+Jakie informacje udost\'eapnia klientom serwer DHCP?\par
+\b0\f8 Adres IP serwera DNS, nazwa DNS, adres IP bramy sieciowej (Gateway), adres Broadcast, maska podsieci, maksymalny czas oczekiwania na odpowied\'9f w protokole ARP, warto\'9c\'e6 MTU (maksymalny rozmiar pakietu), adresy serwer\'f3w NIS, Domena NIS, adres IP serwera SMTP, Adres serwera TFTP, Adres serwera nazw Netbios.\b\f0\par
+Czym r\'f3\'bfni si\'ea serwis BOOTP od DHCP?\par
+\b0\f8 DHCP jest nast\'eapc\'b9 BOOTP. DHCP jest protoko\'b3em nowocze\'9cniejszym o lepszym szybszym algorytmie. BOOTP posiada mas\'ea ogranicze\'f1, kt\'f3re przy wzro\'9ccie liczby serwer\'f3w w Internecie mog\'b3yby okaza\'e6 si\'ea katastrofalne w skutkach.\b\f0\par
+Do czego s\'b3u\'bfy serwis sieciowy DNS?\par
+\ul\b0\f8 DNS\ulnone  realizuje bie\'bf\'b9c\'b9 obs\'b3ug\'ea komputer\'f3w odnajduj\'b9c adresy IP odpowiadaj\'b9ce poszczeg\'f3lnym nazwom.\b\f0\par
+Do czego s\'b3u\'bfy serwis sieciowy RevDNS?\par
+\ul\b0\f8 Reverse DNS\ulnone  zapewnia powi\'b9zanie adresu IP z nazw\'b9 domeny internetowej lub nazw\'b9 komputera. Odwrotnie do DNS.\b\f0\par
+Podaj adres sieci dla hosta o adresie: 192.129.122.3 przy za\'b3o\'bfeniu maski sieci 255.255.255.0.\par
+\pard\fi-360\li360\ul\b0\f8 Adres sieci to:\ulnone  192.129.122.0\b\f0\par
+\pard Do czego s\'b3u\'bfy maska sieci?\par
+\pard\fi-360\li360\ul\b0\f8 Maska sieci\ulnone  \endash  liczba s\'b3u\'bf\'b9ca do wyodr\'eabnienia w adresie IP cz\'ea\'9cci sieciowej od cz\'ea\'9cci hosta. Po wykonaniu iloczynu bitowego maski i adresu IP komputera otrzymujemy adres IP ca\'b3ej sieci, do kt\'f3rej nale\'bfy ten komputer. Model adresowania w oparciu o maski adres\'f3w wprowadzono w odpowiedzi na niewystarczaj\'b9cy, "sztywny" podzia\'b3 adres\'f3w na klasy A, B i C. Pozwala on w elastyczny spos\'f3b dzieli\'e6 du\'bfe dowolne sieci na mniejsze podsieci.\b\f0\par
+\pard Do czego s\'b3u\'bfy BIOS karty sieciowej?\par
+\b0\f8 BIOS karty sieciowej s\'b3u\'bfy do podnoszenia systemu operacyjnego przez sie\'e6 i obs\'b3ugi DHCP, daje dodatkowe mo\'bfliwo\'9cci konfigurowania karty.\b\f0\par
+Wymie\'f1 protoko\'b3y sieciowe w oparciu o kt\'f3re mo\'bfna przeprowadzi\'e6 podnoszenie SO w sieci LAN\par
+\pard\fi-360\li360\b0\f8 IPX/SPX, PXE, NetWare, RPL (Microsoft), VLM, NetX, BOOTP, TFTP, DHCP\b\f0\par
+\pard Wymie\'f1 serwisy, kt\'f3re wykorzystywane w procesie podnoszenia SO w sieci LAN\par
+\pard\fi-360\li360\b0\f8 TFTP, RPL\b\f0\par
+\pard Naszkicuj schemat blokowy procedury boot\rquote u sieciowego SO opartego o protok\'f3\'b3 PXE.\par
+\b0\f8 Bios sieci\'f3wki szuka w sieci lokalnej serwera DHCP -> otrzymuje adres IP i nazw\'ea pliku z programem -> pobiera plik (program rozruchowy) przez TFTP -> program rozruchowy pobiera kolejne pliki potrzebne do uruchomienia systemu\b\f0\par
+Wymie\'f1 znane Ci rodzaje ramek wykorzystywane w transmisji w sieciach typu ethernet.\par
+\pard\fi-360\li360\b0\f8 Ethernet 802.2,Ethernet 802.3,Ethernet SNAP, Ethernet II\b\f0\par
+\pard Podaj znane Ci restrykcje dotycz\'b9ce konta w sieci Novel NetWare.\par
+\pard\fi-360\li360\b0\f8 - blokowanie konta, - okres wa\'bfno\'9cci has\'b3a, - limit czasowy logowania, dzienny, godzinny,\par
+\pard - regulowany dost\'eap do zasob\'f3w i uprawnie\'f1, - rozmiar wolumenu.\b\f0\par
+Podaj zane Ci restrykcje dotycz\'b9ce has\'b3a dla konta w sieci Novel NetWare.\par
+\pard\fi-360\li360\b0\f8 - blokowanie konta, - okres wa\'bfno\'9cci has\'b3a, - limit czasowy logowania, dzienny, godzinny,\b\f0\par
+\pard Jaka jest zasadnicza r\'f3\'bfnica pomi\'eadzy autoryzacj\'b9/dost\'eapem w trybie bindery oraz w trybie\par
+us\'b3ug katalogowych (NDS)?\par
+\pard\qj\ul\b0\f8 W bindery\ulnone  u\'bfytkownicy maj\'b9 oddzielne konta w ka\'bfdym serwerze (i od niego otrzymuje us\'b3ugi), logowanie  przez has\'b3o do ka\'bfdego serwera. \ul Natomiast w NDS\ulnone  u\'bfytkownik ma globalne konto dla ca\'b3ej sieci (loguje si\'ea do ca\'b3ej sieci <z weryfikowaniem>) tu u\'bfytkownik widzi cala siec  jako jeden system informacyjny , co zwi\'eaksza wydajno\'9c\'e6 pracy i obni\'bfa koszty administracyjne.\b\f0\par
+\pard Wymie\'f1 us\'b3ugi mog\'b9ce podlega\'e6 systemowi rozlicze\'f1 (accounting) w SO Novel NetWare.\par
+\ul\b0\f8 Accounting ( rozliczanie)\ulnone   - \'9cledzenie i sprawozdawczo\'9c\'e6 dot. Zasob\'f3w sieciowych. Admin mo\'bfe przydzieli\'e6 limity us\'b3ug sieciowych i przypi\'b9\'e6 ka\'bfdemu bilans konta dost\'eapnych us\'b3ug i zasob\'f3w. Oczywi\'9ccie NetWare ma opcj\'ea rozliczania, Admin mo\'bfe obci\'b9\'bfy\'e6 u\'bfytkownika za korzystanie z 5 podst. us\'b3ug:\fs24\par
+\pard\fi-360\li360\fs20 - Bloki odczytane z twardych dysk\'f3w\par
+\pard - Bloki zapisane na twardych dyskach serwera\fs24\par
+\fs20 - Czas trwania rejestracji u\'bfytkownik\'f3w w serwerze\fs24\par
+\fs20 - Dane zachowane w serwerze\fs24\par
+\fs20 - \'af\'b9dania spe\'b3nione w serwerze\b\f0\par
+Do czego s\'b3u\'bf\'b9 skrypty logowania w SO Novel NetWare, jakie s\'b9 ich rodzaje.\par
+\ul\b0\f8 Login script\ulnone  \endash  czyli skrypt rejestracyjny, w NetWare plik zawieraj\'b9cy polecenia, kt\'f3re organizuj\'b9 \'9crodowisko sieciowe u\'bfytkownika, kiedy u\'bfytkownik okre\'9cli je podczas rejestrowania si\'ea w sieci. Mo\'bfe odwzorowywa\'e6 nap\'eady, wy\'9cwietla\'e6 komunikaty, ustawia\'e6 zmienne \'9crodowiskowe i wykonywa\'e6 programy albo menu.\fs24\par
+\pard\fi-360\li360\fs20 Rodzaje:\par
+\pard 1 )- programy rejestracyjne pojemnik\'f3w (Container login script) \endash   ustawiaj\'b9 og\'f3lne \'9crodowisko dla wszystkich u\'bfytkownik\'f3w\fs24\par
+\fs20 2)- programy rejestracyjne profili  (Profile login script) \endash  \'9crodowisko dla wielu u\'bfytkownik\'f3w\fs24\par
+\fs20 3)- programy rejestracyjne u\'bfytkownika( User login script) \endash  dla pojedynczego u\'bfytkownika\b\f0\par
+Jaka jest lokalizacja skrypt\'f3w logowanie w SO Novel NetWare w trybie bindery, a jaka\par
+w trybie us\'b3ug katalogowych (NDS)?\par
+\pard\fi-360\li360\ul\b0\f8 W trybie Bindery Skrypt Logowania jest zapisany w: \par
+\ulnone SYS:\\PUBLIC\\NET$LOG.DAT (skrypt logowania dla wszystkich)\par
+\pard SYS:\\MAID\\(ID_N)\\LOGIN (skrypt logowania u\'bfytkownika)\fs24\par
+\pard\fi-360\li360\ul\fs20 Natomiast w trybie NDS w:\par
+\ulnone SYS:\\_NETWARE\\\b\f0\par
+\pard Do czego s\'b3u\'bfy polecenie MAP i jak/gdzie mo\'bfe/powinno by\'e6 u\'bfywane?\par
+\pard\fi-360\li360\b0\f8 Przypisuje nap\'ead logiczny do podanej \'9ccie\'bfki\par
+\pard map [root \endash  opcjonalne] nap\'ead_logiczny := \'9ccie\'bfka sieciowa\fs24\par
+\pard\fi-360\li360\fs20 prz. Map root f:=usr1\\stud\\low_id\fs24\par
+\pard\fs20 Polecenie MAP mo\'bfe by\'e6 u\'bfywane w celu u\'b3atwienia sobie dost\'eapu do katalog\'f3w, miejsc sieciowych, itd.\b\f0\par
+Wymie\'f1 znane Ci atrybuty plik\'f3w w SO Novel NetWare.\par
+\pard\qj\b0\f8 RO \endash  read only, H \endash  hidden, Sy \endash  system, A \endash  archive, RW \endash  zapis odczyt, (5 kolejnych z mac'a) DI \endash  usuwanie zabronione, RI, zmiana nazwy zabroniona, CI \endash  kopiowanie zabronione, X \endash  execute only, Sh \endash  sharable, T \endash  brak dost\'eapu (transaction out), P \endash  purge (od razu jest usuwany z dysku, nie jest przenoszony do puli plik\'f3w usuni\'eatych), IC \endash  natychmiastowa kompresja, DC \endash  zabroniona kompresja, CC \endash  do kompresji, CO \endash  skompresowany, DM \endash  don't migrate, DS \endash  don't subalocate, N \endash  normal, M \endash  migorwa\'b3,\b\f0\par
+\pard Wymie\'f1 znane Ci atrybuty katalog\'f3w w SO Novel NetWare.\par
+\b0\f8 S \endash  Supervisory, R \endash  Read, W \endash  Write, C \endash  Create, E \endash  erase, M\endash  modify, F \endash  File Scan, A \endash  Access Control.\b\f0\par
+Przestaw spos\'f3b gospodarki przestrzeni\'b9 dyskow\'b9 w SO Novel NetWare, jaki jest algorytm\par
+pobierania miejsca na nowe pliki, jaki jest algorytm usuwania plik\'f3w.\par
+\pard\qj\b0\f8 Dysk jest podzielony na pliki istniej\'b9ce, pliki usuni\'eate i wolne miejsce. Gdy plik jest usuwany nie znika z dysku tylko jest przechowywany w puli plik\'f3w usuni\'eatych i po okre\'9clonym czasie jest wymazywany. Gdy brakuje miejsca na pliki istniej\'b9ce to najstarsze pliki usuni\'eate s\'b9 usuwane (Purge) zwolniona przestrze\'f1 dyskowa jest przeznaczana na pliki istniej\'b9ce.\b\f0\par
+\pard Podaj kryteria dzia\'b3ania mechanizmu kompresji w SO Novel NetWare, wymie\'f1 zalety i wady\par
+tego mechanizmu.\par
+\b0\f8 Plik jest kompresowany, gdy istnieje na dysku przez 14 dni i nie jest cz\'easto u\'bfywany. Uzysk wolnego miejsca wynosi ok. 70%. Kompresja nast\'b9pi tylko wtedy, gdy na dysku znajduje si\'ea 15% wolnego miejsca. Domy\'9clnie kompresja jest wykonywana w godzinach ma\'b3ej aktywno\'9cci serwera, czyli noc\'b9 (godziny 0.00 \endash  6.00).\par
+FLAGI: (cc) \endash  nie mo\'bfe ulec kompresji, (co) \endash  skompresowany\fs24\par
+\pard\fi-360\li360\ul\fs20 Zalety\ulnone : Znaczny uzysk wolnego miejsca\fs24\par
+\pard\ul\fs20 Wady\ulnone : Wolniejszy dost\'eap do plik\'f3w\b\f0\par
+Podaj kryteria dzia\'b3ania mechanizmu migracji w SO Novel NetWare, wymie\'f1 zalety i wady\par
+tego mechanizmu.\par
+\ul\b0\f8 Migracja\ulnone  \endash   przenoszenie nieaktywnych lub rzadko u\'bfywanych danych na ta\'f1szy no\'9cnik. Chocia\'bf fizycznie dane s\'b9 na no\'9cnikach to NetWare nadal je widzi na wolumenie.\par
+\ul Zalety:\ulnone  Zwalnia powierzchni\'ea dysku twardego dla plik\'f3w cz\'ea\'9cciej u\'bfywanych, pliki przeniesione nadal s\'b9 widoczne.\fs24\par
+\ul\fs20 Wady:\ulnone   Czasoch\'b3onne dotarcie do przeniesionych plik\'f3w.\b\f0\par
+Na czym polega mechanizm subalokacji w SO Novel NetWare. Zilustruj go przyk\'b3adem\par
+pliku o wielko\'9cci 12000 B\par
+\b0\f8 Chodzi o spos\'f3b przydzielania miejsca na dysku na pliki. Na plik przeznaczane s\'b9 kolejno 2\up10 n\up0  B.\fs24\par
+\fs20 Czyli 12000B = 8192B (8KB) + 2048 (2KB) + 1024B + 512B + 128B + 64B + 32B\b\f0\par
+Jakie znasz rozmiary jednostek lokacyjnych w SO Novel NetWare\par
+Jakie mog\'b9 by\'e6 rozmiary jednostek subalokacyjnych w SO Novel NetWare\par
+\b0\f8 Rozmiary jednostek subalokacyjnych s\'b9 pot\'eagami dw\'f3jki.\b\f0\par
+Wymie\'f1 i kr\'f3tko opisz prawa w SO Novel NetWare\par
+\pard\fi-360\li360\b0\f8 Podstawowe prawa to: [SRWCEMFA], gdzie\par
+\pard S \endash  Supervisory, R \endash  Read, W \endash  Write, C \endash  Create, E \endash  Erase, M \endash  Modify, F \endash  File Scan,\fs24\par
+\pard\fi-360\li360\fs20 A \endash  Access Control\b\f0\par
+\pard Jakie polecenie z linii komendy s\'b3u\'bfy do operacji prawami w SO Novel NetWare\par
+\pard\fi-360\li360\b0\f8 RIGHTS \endash  nadaje prawa.\par
+\pard Ew. FLAG\fs24\par
+\fs20 Grant \endash  dodaje prawo, Revoke \endash  odbiera prawo, Remove \endash  kasuje mask\'ea praw, Allow \endash  modyfikuje mask\'ea praw\b\f0\par
+Jakie znasz metody nabywania praw w SO Novel NetWare.\par
+\b0\f8 Przez dziedziczenie (czyli przez przynale\'bfno\'9c\'e6 do grupy) lub nadanie praw przez w\'b3a\'9cciciela/administratora.\b\f0\par
+Jakie znasz typy obiekt\'f3w w SO Novel NetWare\par
+\ul\b0\f8 Generalnie to Typy obiekt\'f3w s\'b9 dwa:\par
+\ulnone - Obiekt typu \ul POJEMNIK\ulnone  (kraj / organizacja / jednostka organizacyjna).\fs24\par
+\fs20 - Obiekt typu \ul LI\'8c\'c6\ulnone  (AFP Server (serwer protoko\'b3u AFP), Alias (nazwa zast\'eapcza), Bindery (baza bindery), Bindery Queue (kolejka bindery), Computer, Directory Map (odwzorowanie katalogu), Distribution List (rozdzielnik), Group, Message-Routing Group (gr. Serwer\'f3w poczty), NCP Server, Organizational Role (funkcja w organizacji), Print Queue (kolejka zada\'f1 do wydruku), Print Server (serwer wydruku), Printer, Profile, Unknown, User, Volume (wolumen).\b\f0\par
+Jakie z praw w SO Novel NetWare trzeba posiada\'e6 aby m\'f3c nada\'e6 prawa innemu\par
+u\'bfytkownikowi.\par
+\b0\f8 A lub/i  S\b\f0\par
+W jaki spos\'f3b w SO Novel NetWare mog\'b9 by\'e6 pod\'b3\'b9czone i u\'bfytkowane drukarki sieciowe.\par
+\pard\fi-180\li180\b0\f8 1. (w stylu UNIX) jest serwer (na kt\'f3rym jest zainstalowany softwareowy Print Server i PLPD i do niego s\'b9 pod\'b3\'b9czone drukarki lokalne (COM, LPT, USB) \par
+\pard\fi-360\li360 2. do sieci wpi\'eaty jest Print Server (chyba 16 port\'f3w) z interfejsem sieciowym i do niego s\'b9 pod\'b3\'b9czone drukarki\par
+\pard 3. do sieci jest wpi\'eaty terminal, do kt\'f3rego s\'b9 pod\'b3\'b9czone drukarki\fs24\par
+\fs20 4. drukarka zewn\'eatrzna + OS + PLPD\b\f0\par
+Przedstaw schemat dzia\'b3ania drukowania sieciowego opartego o system kolejek w SO Novel NetWare\par
+\b0\f8 USER zleca drukowanie - (Print Server) -> zadanie trafia do kolejki - (PS) -> teraz do katalogu drukarki -(PS) -> do drukarki (drukowanie) ->PS wysy\'b3a powiadomienie do USER-a.\b\f0\par
+Jakie typy obiekt\'f3w s\'b9 wykorzystywane w systemie drukowania kolejkowego w SO Novel NetWare\par
+\b0\f8 Bufor, katalog odpowiedzi, zewn\'eatrzny proces odpowiedzialny za przesy\'b3anie danych i komunikat\'f3w, (Ew. system rozlicze\'f1).\b\f0\par
+Wymie\'f1 parametry plik\'f3w przechowywane w systemie plik\'f3w SO Novel NetWare\par
+\b0\f8 Data i czas: kreacji, modyfikacji, dost\'eapu, usuni\'eacia, archiwizacji. Informacje: o prawach dost\'eapu do pliku, przez kogo by\'b3 stworzony, modyfikowany, usuni\'eaty.\b\f0\par
+Gdzie na wolumenie umieszczane s\'b9 uchwyty do plik\'f3w z usuni\'eatych katalog\'f3w?\par
+\pard\fi-360\li360\b0\f8 TEMP:\\ TMP\b\f0\par
+\pard Opisz zasad\'ea dzia\'b3ania mechanizmu zapobiegaj\'b9cemu zgadywaniu has\'b3a w SO Novel NetWare\par
+\pard\fi-360\li360\b0\f8 Po 5 nieudanych pr\'f3bach zalogowania konto jest blokowane. Mo\'bfe to by\'e6 blokada czasowa lub permanentna.\b\f0\par
+\pard W drzewie ZET_TREE w kontek\'9ccie zet na serwerze NOV zamontowany jest wolumen PATCH.\par
+Podaj pe\'b3na nazw\'ea tego obiektu w notacji us\'b3ug katalogowych (NDS)\par
+\pard\fi-360\li360\b0\f8 ET_TREE\\\\NOV.zet\\PATCH\b\f0\par
+\pard Co to jest BIOS i jaka jest jego rola w komputerze klasy PC?\par
+\pard\li360\qj\b0\f8 BIOS (basic input/output system). Jest to uk\'b3ad troszcz\'b9cy si\'ea o prawid\'b3owe wsp\'f3\'b3dzia\'b3anie wszystkich komponent\'f3w systemu. Posiada on specjalny program zawieraj\'b9cy polecenia, kt\'f3re komputer musi zawsze wykona\'e6 w pierwszej kolejno\'9cci, tu\'bf po uruchomieniu. Jedno z nich nakazuje za\'b3adowanie systemu z dysku twardego. Nast\'eapnie BIOS t\'b3umaczy sygna\'b3y wysy\'b3ane przez zainstalowane urz\'b9dzenia wej\'9ccia/wyj\'9ccia, takie jak klawiatura, na rozkazy zrozumia\'b3e dla procesora.\b\f0\par
+\pard Do czego s\'b3u\'bfy pami\'ea\'e6 typu CMOS w komputerach PC, w jakiej generacji uk\'b3ad\'f3w Intel\rquote a si\'ea pojawi\'b3a?\par
+\pard\li360\b0\f8 Pod nazw\'b9 pami\'eaci CMOS w komputerze PC rozumie si\'ea pami\'ea\'e6 CMOS-RAM, w kt\'f3rej zapami\'eatana jest konfiguracja komputera. Pami\'ea\'e6 ta jest podtrzymywana bateryjnie, i jest zwykle zintegrowana w jednym uk\'b3adzie z zegarem czasu rzeczywistego RTC (ang. Real Time Clock).\b\f0\par
+\pard Przedstaw spos\'f3b adresacji HDD z punktu widzenia BIOS\rquote a\par
+\pard\fi-360\li360\b0\f8 Podstawow\'b9 jednostk\'b9 okre\'9claj\'b9c\'b9 fizyczne po\'b3o\'bfenie danych na dysku s\'b9 trzy warto\'9cci C,H,S oznaczaj\'b9ce odpowiednio: numer cylindra, g\'b3owic, sektora. Wi\'eakszo\'9c\'e6 system\'f3w operacyjnych nie korzysta jednak z adresowania CHS gdy\'bf jest ono zbyt skomplikowane. W zamian za to systemy operacyjne przeliczaj\'b9 warto\'9cci C,H,S na logiczne numery sektor\'f3w. Ten spos\'f3b adresowania danych na dysku twardym nosi nazw\'ea LBA (z ang. Logical Block Addressing).\b\f0\par
+\pard Jakie informacje zawiera Master Boot Sektor\par
+\pard\li360\b0\f8 Master Boot Sector znajduje si\'ea w pierwszym sektorze dysku twardego. Zawiera IPL - Initial Program Loader (zwany r\'f3wnie\'bf bootstrapem) oraz informacj\'ea o organizacji partycji na dysku umieszczon\'b9 w Tablicy Partycji.\b\f0\par
+\pard Co zawiera Boot Rekord \endash  jakiej jest wielko\'9cci\par
+\pard\fi-360\li360\b0\f8 Ma 512 bajt\'f3w. Struktura Boot Record znajduje si\'ea na samym pocz\'b9tku ka\'bfdej partycji FAT. Dla FAT12 i FAT16 zajmuje ona jeden sektor, a dla FAT32 trzy sektory. Zawiera program odpowiedzialny za za\'b3adowanie j\'b9dra zainstalowanego na tej partycji systemu i przekazanie mu kontroli. Dodatkowo zawiera pole opisuj\'b9ce rozmiar sektora dla danej partycji (zwykle 512 B).\par
+\pard\b\f0 Co to jest Tablica Partycji\par
+\ul\b0\f8 Tablica partycji\ulnone  \endash  jest przechowywana w master Boot Rekordzie pierwszego sektora dysku twardego.\fs24\par
+\pard\fi-360\li360\b\fs20\tab\b0 Tablica partycji zawiera informacje o po\'b3o\'bfeniu (w notacji CHS i LBA) i typie wszystkich partycji dysku. Dysk mo\'bfe mie\'e6 od jednej do czterech partycji. Jedna z partycji mo\'bfe by\'e6 partycj\'b9 rozszerzon\'b9 i wtedy mo\'bfe by\'e6 podzielona na dyski logiczne.\b\f0\par
+\pard Przedstaw schematycznie struktur\'ea podstawowej partycji DOS\par
+\pard\fi-360\li360\b0\f8 Ka\'bfdy wpis w tablicy partycji ma nast\'eapuj\'b9cy uk\'b3ad:\par
+\pard\fs24\par
+\fs20 |==================================\fs24\par
+\fs20 | Numer bajta     | Opis                                         \fs24\par
+\fs20 |==================================\fs24\par
+\fs20 |     1                   | flaga aktywno\'9cci                      \fs24\par
+\fs20 |==================================\fs24\par
+\fs20 |     3                   | startowy CHS                          \fs24\par
+\fs20 |==================================\fs24\par
+\fs20 |     1                   | typ partycji                               \fs24\par
+\fs20 |==================================\fs24\par
+\fs20 |     3                   | ko\'f1cowy CHS                          \fs24\par
+\fs20 |==================================\fs24\par
+\fs20 |     4                   | sektor pocz\'b9tkowy                   \fs24\par
+\fs20 |==================================\fs24\par
+\fs20 |     4                   | liczba sektor\'f3w partycji          \fs24\par
+\fs20 |==================================\fs24\par
+\pard\fi-360\li360\par
+\fs20 Znaczenie poszczeg\'f3lnych p\'f3l:\par
+\ul Flaga aktywno\'9cci\ulnone  \endash  okre\'9cla tzw. aktywn\'b9 partycj\'ea, czyli partycj\'ea, z kt\'f3rej standardowy program rozruchowy powinien za\'b3adowa\'e6 system operacyjny. Tylko jedna partycja mo\'bfe mie\'e6 ustawion\'b9 t\'b9 flag\'ea\fs24\par
+\pard\ul\fs20 Startowy CHS\ulnone  \endash  adres pocz\'b9tku partycji w notacji cylinder, g\'b3owica, sektor\fs24\par
+\ul\fs20 Typ partycji\ulnone  \endash  okre\'9cla typ partycji podstawowej lub oznacza partycj\'ea jako rozszerzon\'b9 \fs24\par
+\ul\fs20 Ko\'f1cowy CHS\ulnone  \endash  adres ko\'f1ca partycji \fs24\par
+\ul\fs20 Sektor pocz\'b9tkowy\ulnone  \endash  adres pierwszego sektora \fs24\par
+\ul\fs20 Liczba sektor\'f3w\ulnone  \endash  liczba sektor\'f3w nale\'bf\'b9cych do partycji \b\f0\par
+Ile dysk\'f3w logicznych mo\'bfe by\'e6 wykreowanych na podstawowej partycji DOS\par
+\pard\fi-360\li360\b0\f8 Dyski logiczne mo\'bfna tworzy\'e6 wy\'b3\'b9cznie na partycji rozszerzonej.\b\f0\par
+\pard Jakie struktury inicjuje proces formatowania partycji DOS\par
+\pard\fi-360\li360\b0\f8 Tablic\'ea FAT.\b\f0\par
+\pard Co to jest jednostka lokacyjna\par
+\pard\fi-360\li360\b0\f8 Rozmiar najmniejszej ilo\'9cci miejsca, na kt\'f3ry mog\'b9 by\'e6 zapisane dane.\par
+\pard\b\f0 Ile mo\'bfe by\'e6 maksymalnie jednostek alokacyjnych na jednym dysku logicznym z systemem plik\'f3w FAT16. Z czego wynika ta liczba.\par
+\pard\fi-360\li360\b0\f8 Maksymalnie mo\'bfe ich by\'e6 65536. Wynika to z architektury 16-bitowej -> 2\up10 16\up0  = 65536.\b\f0\par
+\pard Ile mo\'bfe by\'e6 maksymalnie jednostek alokacyjnych na jednym dysku logicznym z systemem plik\'f3w FAT12. Z czego wynika ta liczba.\par
+\b0\f8 Maksymalnie mo\'bfe ich by\'e6 4096. Wynika to z architektury 12 bitowej -> 2\up10 12\up0  = 4096\b\f0\par
+Jaka jest wielko\'9c\'e6 jednostki alokacyjnej na dysku logicznym o pojemno\'9cci 340 MB z systemem plik\'f3w FAT16\par
+\pard\fi-360\li360\b0\f8 Wielko\'9c\'e6 jednostki alokacyjnej dla dysk\'f3w w FAT16, od 256 MB do 511 MB, wynosi  8KB.\par
+\pard Pomno\'bfone przez 65536 daje 512MB, czyli pozwoli zaadresowa\'e6 dysk o takiej pojemno\'9cci.\b\f0\par
+Naszkicuj przyk\'b3adowy spos\'f3b o alokacji pliku o wielko\'9cci 22 KB w tablicy FAT, gdy wielko\'9c\'e6 jednostki alokacyjnej wynosi 4KB\par
+\pard\fi-360\li360\b0\f8 -- 101  \endash   102 \endash  103 \endash  104 \endash  105 \endash  106 \endash  107\par
+\pard -- 102  \endash   103 \endash  104 \endash  105 \endash  106 \endash  107 \endash  EOF\fs24\par
+\fs20 22 KB \endash  101 (4KB), 102 (4KB), 103 (4KB), 104 (4KB), 105 (4KB), 106 (2KB), 107 (EOF)\b\f0\par
+W jakich strukturach SO DOS zapisywane s\'b9 informacje o pliku? \endash  wymie\'f1 te parametry.\par
+\b0\f8 Informacje o plikach s\'b9 przechowywane w tablicy Alokacji Plik\'f3w oraz Obszarze Danych, gdzie s\'b9 zawarte dane Tablicy Katalog\'f3w oraz Plik\'f3w.\ul\par
+\ulnone Opis pliku znajduje si\'ea w 32 B:\fs24\par
+\fs20 0 \endash  7 : \ul Nazwa 8-znakowa\ulnone ,   8 \endash  10: \ul Rozszerzenie 3-znakowe\ulnone\fs24\par
+\fs20 11 : \ul Atrybuty\ulnone  [ 7, 6 \endash  Nieu\'bfywane, 5 \endash  (A) Archiwalny, 4 \endash  (D) Podkatalog, 3 \endash  (V) Volume Label,\fs24\par
+\pard\li1260\fs20 2 \endash  (S) System, 1 \endash  (H) Ukryty, 0 \endash  (R) Tylko do odczytu ]\par
+\pard 12 \endash  21 : \ul Nieu\'bfywane\ulnone\fs24\par
+\fs20 22 \endash  23 : \ul Czas modyfikacji\ulnone  [15 \endash  11 : godzina (0 - 23), 10 \endash  5 : minuta (0 \endash  59), 4 \endash  0 : po\'b3owa sekundy (0 \endash  29)]\fs24\par
+\fs20 24 \endash  25 : \ul Data modyfikacji\ulnone  [15 \endash  9 : rok od 1980 (0 \endash  127), 8 \endash  5 : miesi\'b9c (1 \endash  12), 4 \endash  0 : dzie\'f1 (1 \endash  31)]\fs24\par
+\fs20 25 \endash  27 : \ul Numer pierwszej Jednostki  Alokacyjnej w \'b3a\'f1cuchu\ulnone\fs24\par
+\fs20 28 \endash  31 : \ul Wielko\'9c\'e6 pliku w bajtach\ulnone\b\f0\par
+Wymie\'f1 i opisz atrybuty plik\'f3w w SO DOS\par
+\pard\fi-360\li360\b0\f8\tab - \b r \b0 - read only - tylko do odczytu (nie jest mo\'bfliwy zapis zmian w tego typu plikach)\fs24\par
+\pard\fs20\tab - \b h \b0 - hidden - plik ukryty (nie wy\'9cwietla si\'ea w li\'9ccie plik\'f3w)\fs24\par
+\fs20\tab - \b s\b0  - system - plik systemowy (zawiera dane, kt\'f3re okre\'9claj\'b9 ustawienia systemu)\fs24\par
+\fs20\tab - \b a\b0  - archive - plik archiwalny\b\f0\par
+Opisz spos\'f3b adresacji pami\'eaci operacyjnej w SO DOS\par
+\pard\fi-360\li360\b0\f8 Adresacja oparta jest o model segment:offset t\'b3umaczony na 20bitowy adres liniowy\b\f0\par
+\pard Naszkicuj map\'ea pami\'eaci operacyjnej w SO DOS i zaznacz na niej obszary: pami\'ea\'e6 konwencjonalna, pami\'ea\'e6 g\'f3rna, pami\'ea\'e6 extended, HMA, BIOS\par
+\pard\fi-360\li360\b0\f8 +--------------------+ 0000\par
+\pard | pami\'ea\'e6\tab         |\fs24\par
+\fs20 | konwencjonalna |\fs24\par
+\fs20 +--------------------+ A000\fs24\par
+\fs20 | pami\'ea\'e6 g\'f3rna      |\fs24\par
+\fs20 +--------------------+\fs24\par
+\fs20 | EMS                    |\fs24\par
+\fs20 +--------------------+\fs24\par
+\fs20 | HMA    \tab         |\fs24\par
+\fs20 +--------------------+\fs24\par
+\fs20 |  BIOS                 |\fs24\par
+\trowd\trgaph10\trleft51\trpaddl10\trpaddr10\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrt\brdrw1\brdrs\brdrcf1\clbrdrr\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx9637\pard\intbl\cell\row\pard\b\f0\fs20\par
+Wyja\'9cnij mechanizm shadow menory\par
+\pard\fi-360\li360\tx720\b0\f8\tab Shadow Memory polega na kopiowaniu zawarto\'9cci pami\'eaci ROM do pami\'eaci RAM dzi\'eaki czemu uzyskuje szybszy dost\'eap do skopiowanych danych, ale kosztem cennej pami\'eaci RAM.\b\f0\par
+\pard Wymien znane Ci mechanizmy obs\'b3ugi pami\'eaci extended w SO DOS\par
+\pard\fi-360\li360\b0\f8 Procesory 286 i nowsze posiadaj\'b9 ponad 20 bitow\'b9 magistral\'ea adresow\'b9 umo\'bfliwiaj\'b9c\'b9 bezpo\'9crednie adresowanie pami\'eaci RAM powy\'bfej 1 MB. Obszar ten mo\'bfe by\'e6 wykorzystywany do dowolnych cel\'f3w za wyj\'b9tkiem uruchamiana proces\'f3w, gdy\'bf te ze wzgl\'eadu na nieci\'b9g\'b3o\'9c\'e6 obszaru pami\'eaci mog\'b9 by\'e6 aktywne jedynie w obszarze pami\'eaci konwencjonalnej. Wi\'b9\'bfe si\'ea to w\'b3a\'9cciwo\'9cci\'b9 systemu DOS, kt\'f3ry mo\'bfe pracowa\'e6 tylko w trybie rzeczywistym.\par
+\pard\tab Szczeg\'f3lne znaczenie w obszarze Extended Memory ma pierwszy blok 64 KB powy\'bfej granicy 1 MB -tzw obszar wysokiej pami\'eaci \b\i (High Memory Area)\b0\i0  . W komputerach z procesorami 286 i nowszymi, przy zainstalowaniu pami\'eaci RAM wi\'eakszej ni\'bf 1 MB w wyniku segmentowego sposobu adresacji pami\'eaci, istnieje mo\'bfliwo\'9c\'e6 wykorzystania tego obszaru przez DOS i umieszczaniu w nim zasob\'f3w systemu.\b\f0\par
+Opisz w punktach proces podnoszenia si\'ea SO DOS\par
+\pard\fi-360\li360\b0\f8\tab - je\'9cli bootstrap znajdzie j\'b9dro DOS'a, wczytuje najpierw IO.SYS, a nastepnie MSDOS.SYS\fs24\par
+\pard\fs20\tab - system szuka pliku konfiguracyjnego CONFIG.SYS i wczytuje zawarte w nim ustawienia\fs24\par
+\fs20\tab - MSDOS.SYS szuka COMMAND.COM, wczytuje go do pami\'eaci RAM i uruchamia\fs24\par
+\fs20\tab - COMMAND.COM szuka pliku AUTOEXEC.BAT i wykonuje zawarte tam polecenia startowe; \fs24\par
+\fs20\tab   je\'9cli go nie znajdzie, \'bf\'b9da podania daty i czasu\fs24\par
+\fs20\tab - zostaje wy\'9cwietlony znak zg\'b3oszenia systemu (tzw. PROMPT), po czym system oczekuje \fs24\par
+\fs20\tab   na polecenia \b\f0\par
+Jakie pliki stanowi\'b9 w SO DOS j\'b9dro systemu\par
+\pard\fi-360\li360\b0\f8 IO.SYS (zawiera wbudowane programy obs\'b3ugi standardowych urz\'b9dze\'f1, wsp\'f3\'b3pracuj\'b9ce z procedurami wej\'9ccia-wyj\'9ccia programu BIOS umieszczonego w pami\'eaci sta\'b3ej komputera)\par
+\pard MSDOS.SYS (zawiera procedury realizuj\'b9ce zadania w\'b3a\'9cciwego systemu operacyjnego (j\'b9dro systemu), m.in. zarz\'b9dzania plikami, pami\'eaci\'b9, procesorami)\fs24\par
+\fs20 COMMAND.COM (Stanowi po\'b3\'b9czenie z interpreterem polece\'f1)\fs24\par
+\fs20 program \'b3aduj\'b9cy (nie jest plikiem \endash  jest cz\'ea\'9cci\'b9 bootsektora).\b\f0\par
+Do czego w SO DOS s\'b3u\'bfy plik MSDOS.SYS\par
+\b0\f8 Przechowuje informacje o po\'b3o\'bfeniu folderu Systemu Operacyjnego, zawiera oprogramowanie stanowi\'b9ce j\'b9dro systemu\fs24 .\b\f0\fs20\par
+Do czego w SO DOS s\'b3u\'bfy plik AUTOEXEC.BAT\par
+\pard\fi-360\li360\b0\f8 Jest to makropolecenie, kt\'f3re jest automatycznie wykonywane w ko\'f1cowej fazie startu systemu. Najcz\'ea\'9cciej umieszcza si\'ea w nim polecenia konfiguruj\'b9ce system i przygotowuj\'b9ce \'9crodowisko pracy u\'bfytkownika, zawiera zmienne \'9crodowiskowe.\b\f0\par
+\pard Do czego s\'b3u\'bfy interpreter polece\'f1\par
+\b0\f8 Interpreter jest domy\'9cln\'b9 pow\'b3ok\'b9 systemu MS-DOS i niekt\'f3rych wersji systemu Windows. T\'b3umaczy polecenia linii komend wpisane po znaku zach\'eaty (prompt, zwykle w postaci ">" lub "C:\\>") na komendy wykonywalne przez system DOS.\b\f0\par
+Do czego s\'b3u\'bf\'b9 zmienne \'9crodowiskowe PROMPT, PATH, TEMP, COMSPEC\par
+\pard\fi-360\li360\b0\f8 PATH \endash  zawiera list\'ea domy\'9clnych \'9ccie\'bfek do program\'f3w, PROMPT \endash  znak zach\'eaty\par
+\pard TEMP \endash  zawiera \'9ccie\'bfk\'ea do folderu roboczego, COMSPEC \endash  zawiera \'9ccie\'bfk\'ea i nazw\'ea interpretera polece\'f1\b\f0\par
+Wymie\'f1 urz\'b9dzenia specjalne w SO DOS\par
+\pard\fi-360\li360\b0\f8\fs24 Print Server, Drukarka, Poczta PEGASUS, Bazy Danych.\b\f0\fs20\par
+\pard Wymie\'f1 znaki specjalne w SO DOS\par
+\b0\f8\fs24 *  \\  /   .  $ > < | = ?\b\f0\fs20\par
+Czym si\'ea r\'f3\'bfni polecenie \lquote dir > a.txt\rquote   od \lquote dir >> a.txt\rquote\par
+\pard\fi-360\li360\b0\f8 Pierwsze polecenie \b zapisuje\b0  do pliku a.txt zawaro\'9c\'e6 bie\'bf\'b9cego kalatogu, drugie \b dopisuje \b0 zawarto\'9c\'e6 bie\'bf\'b9cego katalogu na ko\'f1co pliku a.txt.\b\f0\par
+\pard Do czego s\'b3u\'bf\'b9 makrodyrektywy\par
+\ul\b0\f8 Makrodyrektywy\ulnone  to zestaw wielu polece\'f1 przeznaczony do wykonywania przez okre\'9clon\'b9 aplikacj\'ea w celu automatyzacji pewnych czynno\'9cci.\b\f0\par
+W jaki spos\'f3b przekazujemy parametry wykonania do makrodyrektyw\par
+\pard\fi-360\li360\b0\f8 Przekazujemy je po znaku @.\b\f0\par
+\pard Do czego s\'b3u\'bfy znak `|` (pipelining) w komendach\par
+\pard\fi-360\li360\b0\f8 Znak potoku przekierowuje polecenie do drugiego polecenia.\par
+\pard Wyj\'9ccie jednego polecenia jest przekierowywanie na wej\'9ccie drugiego polecenia.\fs24\par
+\pard\fi-360\li360\b\f0\fs20 Z jakich wsp\'f3lnych element\'f3w korzystaj\'b9 w\'b9tki dzia\'b3aj\'b9ce w ramach tego samego procesu?\par
+\par
+Uzasadnij dlaczego architektura jednolita jest efektywniejsza pod wzgl\'eadem czasu wykonania zadania.\par
+\par
+\pard Na czym polega ochrona zasob\'f3w systemu komputerowego? (przed kim/czym, jak realizowana sprz\'eatowo i programowo)\par
+\par
+Co zawiera kolejka proces\'f3w gotowych w systemach operacyjnych?\par
+\pard\fi-360\li360\b0\f8\fs24\par
+\pard\b\f0\fs20 Czy metoda sprawdzania gotowo\'9cci danych do odczytu/zapisu poprzez odpytywanie jest wydajniejsza od przerwa\'f1? Odpowied\'9f uzasadnij.\par
+\pard\fi-360\li360\b0\f8\fs24\par
+\b\f0\fs20 Uporz\'b9dkuj poni\'bfsze rodzaje pami\'eaci pod wzgl\'eadem szybko\'9cci dost\'eapu od najszybszego do najwolniejszego: ta\'9cmy magnetyczne, rejestry, RAM, DVD, CDROM, twardy dysk, pami\'ea\'e6 CACHE.\par
+\par
+Wyznacz adres liniowy pami\'eaci je\'9cli znany jest adres segment:offset C900:2000\b0\f8\fs24\par
+\pard\b\f0\fs20\par
+Naszkicuj schemat blokowy procedury boot\rquote u sieciowego SO opartego o protok\'f3\'b3 naturalny Novell NetWare.\par
+}
+ 

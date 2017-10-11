@@ -1,0 +1,64 @@
+﻿- łancuchy, alfabety, symbole i języki
+
+główne definicje, 
+ewentualnie coś opisać
+
+
+- grafy i drzewa
+
+opisać graf, lub wymienić własności drzewa
+
+-
+ dowody przez indukcje
+
+może dać jakiś prosty dowód - znać kroki
+(podstawa, założenie i teza)
+
+-
+ z relacji to głownie ich własnoći mogą być
+np bedzie relacja podana 
+trzeba bedzie ją zinterpretowaći i wypisać jej własności
+
+
+- automaty skonczone
+to tu głównie opis symboli
+i ewentualnie wypisać kilka stanów po kolei
+
+
+- z niedeterministycznych to to samo
+
+
+- wyrażenia regularne 
+co to są, wypisać łancuchy, opisy zbiorów
+
+
+-gramatyki bezkontekstowe
+definicje, łancuchy wypisać
+opisy symboli (terminalne, nieterminalne)
+
+
+- automat ze stosem
+to to co przy kazdym automacie
+opis symboli, po kolei ruchy, zasada działania
+
+- maszyna Turinga
+jak mozna interpretować, wypisac ciag opisów chwilowych
+
+- nieroztrzygalność
+własnoci języków, definicje, problemy podstaw
+
+- hierarchia Chomskyego
+( czym sie różnia gramatyki, jezeyki, automaty)
+wypisać w hierarchii
+
+- złożonosc obliczeniowa
+to tu definicje głównie
+
+- problemy niepodatności
+( co to są problemy, określanie problemów)
+
+-kodowanie informacji ( kody znakowe i liczbowe)
+i tu bedzie an pewno zamiana dziesietnego na binarny
+
+Lorenzo :: 14:46:06
+zw, ide na obiad :P

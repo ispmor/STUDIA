@@ -1,0 +1,311 @@
+Uzasadnij idê stosowania maszyn wirtualnych w systemach operacyjnych.
+
+Podaj jedn¹ wybran¹ definicjê systemu operacyjnego.
+
+Na czym polega transparentnoœæ rozproszonego systemu operacyjnego?
+
+Co rozumiesz pod pojêciem komunikacja miêdzyprocesowa?
+
+Czy jeden program mo¿e sk³adaæ siê z wielu procesów? OdpowiedŸ uzasadnij odpowiedŸ lub sensownoœæ pytania.
+
+Na czym polega ochrona zasobów systemu komputerowego? (przed kim/czym, jak realizowana sprzêtowo i programowo)
+
+Jakie znasz typy systemów operacyjnych ze wzglêdu na sprzêt na który s¹ projektowane?
+
+Czym charakteryzuje siê system czasu rzeczywistego?
+
+Wymieñ i scharakteryzuj znane ci architektury systemów operacyjnych.
+
+Co to jest tryb chroniony oraz tryb rzeczywisty. Do czego s³u¿¹?
+
+Co rozumiesz pod pojêciem maszyny wirtualnej w teorii SO.
+
+Z jakich elementów sk³ada siê typowy system komputerowy?
+
+Podaj podstawowe zadania systemu operacyjnego.
+
+Co rozumiesz pod pojêciem system wieloprocesorowy oraz system rozproszony w kontekœcie wzajemnych ró¿nic.
+
+Wspó³czesne systemy operacyjne ogólnego przeznaczenia zaliczy³(a)byœ do systemów wsadowych czy interakcyjnych? OdpowiedŸ uzasadnij.
+
+Co to jest przerwanie w systemie komputerowym?
+
+Czy system przerwañ s³u¿y do sekwencyjnego (niewspó³bie¿nego) wykonywanie programów?
+
+Do czego s³u¿y przerwanie zegarowe?
+
+Jakie znasz typowe Ÿród³a przerwañ?
+
+Co rozumiesz po pojêciem ochrony pamiêci w systemach komputerowych?
+
+Czy tryb chroniony i rzeczywisty ma jakikolwiek zwi¹zek z dualnym trybem pracy procesora w trybie u¿ytkownika i trybie nadzorcy? OdpowiedŸ uzasadnij.
+
+Do czego jest wykorzystywane przerwanie zegarowe w systemach wielozadaniowych?
+
+Wymieñ elementy którymi zarz¹dza system operacyjny?
+
+Wymieñ konta o najwy¿szym poziomie uprawnieñ w systemach unix i Windows.
+
+Co rozumiesz pod pojêciem komunikacja miêdzyprocesowa?
+
+Czy jeden program mo¿e sk³adaæ siê z wielu procesów? OdpowiedŸ uzasadnij.
+
+Wymieñ i scharakteryzuj znane ci architektury systemów operacyjnych.
+
+Co zawiera blok kontrolny procesu?
+
+Co to jest wirtualna przestrzeñ adresowa procesu a co to jest przestrzeñ fizyczna.
+
+Co to jest proces a co to jest program?
+
+Wymieñ i opisz ró¿nice miêdzy synchronicznym a asynchronicznym dostêpem do urz¹dzeñ.
+
+Uzasadnij dlaczego architektura jednolita jest efektywniejsza pod wzglêdem czasu wykonania zadania.
+
+Co rozumiesz pod pojêciem procesu? Z czego sk³ada siê proces?
+
+Co zawiera kolejka procesów gotowych w systemach operacyjnych?
+
+Co to jest planista przydzia³u procesora?
+
+Wymieñ i scharakteryzuj po jednym zdaniu znane ci algorytmy planowania przydzia³u procesora.
+
+Czym ró¿ni siê w¹tek od procesu?
+
+Z jakich wspólnych elementów korzystaj¹ w¹tki dzia³aj¹ce w ramach tego samego procesu?
+
+Do czego mo¿na wykorzystywaæ semafory?
+
+Na jakie kategorie dzielimy urz¹dzenia ze wzglêdu na sposób dostêpu do danych?
+
+Czym ró¿ni siê komunikacja za pomoc¹ rejestrów i magistrali?
+
+Przedstaw schemat asynchronicznej komunikacji z urz¹dzeniami.
+
+Co rozumiesz pod skrótem DMA? Krótko opisz na czym polega.
+
+Czy metoda sprawdzania gotowoœci danych do odczytu/zapisu poprzez odpytywanie jest wydajniejsza od przerwañ? OdpowiedŸ uzasadnij.
+
+Kiedy generowane s¹ przerwania?
+
+Jakie znasz klasy przerwañ?
+
+Uporz¹dkuj poni¿sze rodzaje pamiêci pod wzglêdem szybkoœci dostêpu od najszybszego do najwolniejszego: taœmy magnetyczne, rejestry, twardy dysk, pamiêæ podrêczna, pamiêæ g³ówna, dyski optyczne.
+
+Uporz¹dkuj poni¿sze rodzaje pamiêci pod wzglêdem szybkoœci dostêpu od najszybszego do najwolniejszego: taœmy magnetyczne, rejestry, RAM, DVD, CDROM, twardy dysk, pamiêæ CACHE.
+
+Co to jest wirtualna przestrzeñ adresowa procesu?
+
+Ustosunkuj siê do nastêpuj¹cego stwierdzenia: "Partycja/plik wymiany to metoda na przyspieszenia dzia³ania programów komputerowych."
+
+Na czym polega technika wymiatania pamiêci przy wykorzystywaniu pamiêci w plikach/partycjach wymiany?
+
+Na czym polega technika stronicowania pamiêci przy wykorzystywaniu pamiêci w plikach/partycjach wymiany?
+
+Do czego s³u¿y MMU?
+
+Zamieñ na postaæ liczbow¹ nastêpuj¹ce uprawnienia: rwxr-xr--
+
+Wymieñ znane Ci cechy systemu operacyjnego linux.
+
+Wymieñ znane Ci stany procesów.
+
+Wymieñ cele zarz¹dzania pamiêci¹ przez SO (system operacyjny).
+
+Scharakteryzuj typy urz¹dzeñ blokowych oraz tekstowych. Podaj przyk³ady. Podkreœl g³ówn¹ ró¿nicê.
+
+Czym ró¿ni siê stronicowanie pamiêci (paging) od wymiatania pamiêci (swaping)?
+
+Wymieñ znane Ci noœniki stosowane w sieciach komputerowych
+
+Wymieñ znane Ci typy okablowania w sieciach komputerowych.
+
+Wymieñ znane Ci standardy sieci ethernet.
+
+Wymieñ wady i zalety sieci opartej na strukturze szyny oraz gwiazdy.
+
+Scharakteryzuj strukturê sieci typu 100Base-Tx.
+
+Scharakteryzuj strukturê sieci typu 10Base-T2 (BNC).
+
+Czym ró¿ni siê kabel typu UTP od kabla typu STP.
+
+Ile par skrêtki wykorzystywane jest do transmisji w sieciach typu 100Base-Tx.
+
+Ile par skrêtki wykorzystywane jest do transmisji w sieciach typu HP 100VG.
+
+Dlaczego stosuje siê skrêtkê, a nie taœmê w kablach LAN.
+
+Jak¹ rolê pe³ni¹ terminatory w sieci opartej o kabel BNC.
+
+Wyjaœnij przeznaczenie nastêpuj¹cych urz¹dzeñ sieciowych: mostek (brid¿e),
+
+Koncentrator (hub), prze³¹cznik sieciowy (switch), traser (router), zapora ogniowa (firewall).
+
+Czym ró¿ni siê koncentrator od prze³¹cznika (switche'a)?
+
+Jakie serwisy mog¹ nadawaæ numer IP na podstawie adresu MAC w sieciach LAN.
+
+Jakie informacje udostêpnia klientom serwer BOOTP?
+
+Jakie informacje udostêpnia klientom serwer DHCP?
+
+Czym ró¿ni siê serwis BOOTP od DHCP?
+
+Do czego s³u¿y serwis sieciowy DNS?
+
+Do czego s³u¿y serwis sieciowy RevDNS?
+
+Podaj adres sieci dla hosta o adresie: 192.129.122.3 przy za³o¿eniu maski sieci 255.255.255.0.
+
+Do czego s³u¿y maska sieci?
+
+Do czego s³u¿y BIOS karty sieciowej?
+
+Wymieñ protoko³y sieciowe w oparciu o które mo¿na przeprowadziæ podnoszenie SO w sieci LAN
+
+Wymieñ serwisy, które wykorzystywane w procesie podnoszenia SO w sieci LAN
+
+Naszkicuj schemat blokowy procedury boot’u sieciowego SO opartego o protokó³ naturalny Novell NetWare.
+
+Naszkicuj schemat blokowy procedury boot’u sieciowego SO opartego o protokó³ PXE.
+
+Wymieñ znane Ci rodzaje ramek wykorzystywane w transmisji w sieciach typu ethernet.
+
+Podaj znane Ci restrykcje dotycz¹ce konta w sieci Novel NetWare.
+
+Podaj zane Ci restrykcje dotycz¹ce has³a dla konta w sieci Novel NetWare.
+
+Jaka jest zasadnicza ró¿nica pomiêdzy autoryzacj¹/dostêpem w trybie bindery oraz w trybie
+
+us³ug katalogowych (NDS)?
+
+Wymieñ us³ugi mog¹ce podlegaæ systemowi rozliczeñ (accounting) w SO Novel NetWare.
+
+Do czego s³u¿¹ skrypty logowania w SO Novel NetWare, jakie s¹ ich rodzaje.
+
+Jaka jest lokalizacja skryptów logowanie w SO Novel NetWare w trybie bindery, a jaka
+
+w trybie us³ug katalogowych (NDS)?
+
+Do czego s³u¿y polecenie MAP i jak/gdzie mo¿e/powinno byæ u¿ywane?
+
+Wymieñ znane Ci atrybuty plików w SO Novel NetWare.
+
+Wymieñ znane Ci atrybuty katalogów w SO Novel NetWare.
+
+Przestaw sposób gospodarki przestrzeni¹ dyskow¹ w SO Novel NetWare, jaki jest algorytm
+
+pobierania miejsca na nowe pliki, jaki jest algorytm usuwania plików.
+
+Podaj kryteria dzia³ania mechanizmu kompresji w SO Novel NetWare, wymieñ zalety i wady
+
+tego mechanizmu.
+
+Podaj kryteria dzia³ania mechanizmu migracji w SO Novel NetWare, wymieñ zalety i wady
+
+tego mechanizmu.
+
+Na czym polega mechanizm subalokacji w SO Novel NetWare. Zilustruj go przyk³adem
+
+pliku o wielkoœci 12000 B
+
+Jakie znasz rozmiary jednostek lokacyjnych w SO Novel NetWare
+
+Jakie mog¹ byæ rozmiary jednostek subalokacyjnych w SO Novel NetWare
+
+Wymieñ i krótko opisz prawa w SO Novel NetWare
+
+Jakie polecenie z linii komendy s³u¿y do operacji prawami w SO Novel NetWare
+
+Jakie znasz metody nabywania praw w SO Novel NetWare.
+
+Jakie znasz typy obiektów w SO Novel NetWare
+
+Jakie z praw w SO Novel NetWare trzeba posiadaæ aby móc nadaæ prawa innemu
+
+u¿ytkownikowi.
+
+W jaki sposób w SO Novel NetWare mog¹ byæ pod³¹czone i u¿ytkowane drukarki sieciowe.
+
+Przedstaw schemat dzia³ania drukowania sieciowego opartego o system kolejek w SO Novel NetWare
+
+Jakie typy obiektów s¹ wykorzystywane w systemie drukowania kolejkowego w SO Novel NetWare
+
+Wymieñ parametry plików przechowywane w systemie plików SO Novel NetWare
+
+Gdzie na wolumenie umieszczane s¹ uchwyty do plików z usuniêtych katalogów?
+
+Opisz zasadê dzia³ania mechanizmu zapobiegaj¹cemu zgadywaniu has³a w SO Novel NetWare
+
+W drzewie ZET_TREE w kontekœcie zet na serwerze NOV zamontowany jest wolumen PATCH.
+
+Podaj pe³na nazwê tego obiektu w notacji us³ug katalogowych (NDS)
+
+Co to jest BIOS i jaka jest jego rola w komputerze klasy PC?
+
+Do czego s³u¿y pamiêæ typu CMOS w komputerach PC, w jakiej generacji uk³adów Intel’a siê pojawi³a?
+
+Przedstaw sposób adresacji HDD z punktu widzenia BIOS’a
+
+Jakie informacje zawiera Master Boot Sektor
+
+Co zawiera Boot Rekord – jakiej jest wielkoœci
+
+Co to jest Tablica Partycji
+
+Przedstaw schematycznie strukturê podstawowej partycji DOS
+
+Ile dysków logicznych mo¿e byæ wykreowanych na podstawowej partycji DOS
+
+Jakie struktury inicjuje proces formatowania partycji DOS
+
+Co to jest jednostka lokacyjna
+
+Ile mo¿e byæ maksymalnie jednostek alokacyjnych na jednym dysku logicznym z systemem plików FAT16. Z czego wynika ta liczba.
+
+Ile mo¿e byæ maksymalnie jednostek alokacyjnych na jednym dysku logicznym z systemem plików FAT12. Z czego wynika ta liczba.
+
+Jaka jest wielkoœæ jednostki alokacyjnej na dysku logicznym o pojemnoœci 340 MB z systemem plików
+
+FAT16
+
+Naszkicuj przyk³adowy sposób o alokacji pliku o wielkoœci 22 KB w tablicy FAT, gdy wielkoœæ jednostki alokacyjnej wynosi 4KB
+
+W jakich strukturach SO DOS zapisywane s¹ informacje o pliku? – wymieñ te parametry.
+
+Wymieñ i opisz atrybuty plików w SO DOS
+
+Opisz sposób adresacji pamiêci operacyjnej w SO DOS
+
+Naszkicuj mapê pamiêci operacyjnej w SO DOS i zaznacz na niej obszary: pamiêæ konwencjonalna, pamiêæ górna, pamiêæ extended, HMA, BIOS
+
+Wyznacz adres liniowy pamiêci jeœli znany jest adres segment:offset C900:2000
+
+Wyjaœnij mechanizm shadow menory
+
+Wymien znane Ci mechanizmy obs³ugi pamiêci extended w SO DOS
+
+Opisz w punktach proces podnoszenia siê SO DOS
+
+Jakie pliki stanowi¹ w SO DOS j¹dro systemu
+
+Do czego w SO DOS s³u¿y plik MSDOS.SYS
+
+Do czego w SO DOS s³u¿y plik AUTOEXEC.BAT
+
+Do czego s³u¿y interpreter poleceñ
+
+Do czego s³u¿¹ zmienne œrodowiskowe PROMPT, PATH, TEMP, COMSPEC
+
+Wymieñ urz¹dzenia specjalne w SO DOS
+
+Wymieñ znaki specjalne w SO DOS
+
+Czym siê ró¿ni polecenie ‘dir > a.txt’  od ‘dir >> a.txt’
+
+Do czego s³u¿¹ makrodyrektywy
+
+W jaki sposób przekazujemy parametry wykonania do makrodyrektyw
+
+Do czego s³u¿y znak `|` (pipelining) w komendach

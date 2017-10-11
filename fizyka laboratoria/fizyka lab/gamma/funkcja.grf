@@ -1,0 +1,52 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.3.0.384
+MinVersion = 2.5
+OS = Windows NT 6.0 Service Pack 2
+
+[Axes]
+xMin = -0.297044155663083
+xMax = 0.851057004336918
+xTickUnit = 0.05
+xGridUnit = 0.05
+xLabel = sin beta
+yMin = -0.120417018193835
+yMax = 1.02768414180617
+yTickUnit = 0.1
+yGridUnit = 0.1
+yLabel = sin alfa
+AxesColor = clBlue
+GridColor = 0x00FF9999
+ShowLegend = 1
+Radian = 1
+LegendPlacement = 0
+LegendPos = 0.207829905639491,0.845296458928209
+
+[PointSeries1]
+FillColor = clRed
+LineColor = clBlue
+Size = 1
+Style = 0
+LabelPosition = 1
+Points = 0.122,0.174;0.216,0.342;0.317,0.500;0.415,0.643;0.500,0.766;0.559,0.866;0.602,0.940;0.622,0.985;
+xErrorBarType = 1
+xErrorBarValue = 0.01
+yErrorBarType = 1
+yErrorBarValue = 0.006
+LegendText = Seria 1
+
+[Func1]
+FuncType = 0
+y = 1.5784708*x-0.0095765935
+LegendText = f(x)=1.5784708*x-0.00957
+Color = clBlue
+
+[Data]
+TextLabelCount = 0
+FuncCount = 1
+PointSeriesCount = 1
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+
